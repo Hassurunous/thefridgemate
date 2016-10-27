@@ -74,7 +74,7 @@
                                 <frame key="frameInset" minX="19" minY="332" width="337" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="4yP-af-s0k" kind="show" id="AMw-m9-XDy"/>
+                                    <segue destination="fWY-5s-Be8" kind="show" id="IJb-zi-Hqy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2C-rm-8pq" userLabel="Grocery List Button">
@@ -175,30 +175,30 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ogb-6S-49J" firstAttribute="top" secondItem="HLp-Rd-WLH" secondAttribute="bottom" constant="8" symbolic="YES" id="1UN-kv-Hd7"/>
                             <constraint firstItem="IPg-9U-m1G" firstAttribute="top" secondItem="MMK-JZ-NEe" secondAttribute="bottom" id="3IZ-pu-45P"/>
                             <constraint firstItem="6QX-vK-FGb" firstAttribute="trailing" secondItem="LEf-Sd-fD4" secondAttribute="trailingMargin" id="49X-F9-z16"/>
                             <constraint firstItem="T3v-PK-nXt" firstAttribute="leading" secondItem="LEf-Sd-fD4" secondAttribute="leading" id="4RO-qk-ec7"/>
+                            <constraint firstItem="HLp-Rd-WLH" firstAttribute="top" secondItem="T3v-PK-nXt" secondAttribute="top" id="51w-Vw-7aQ"/>
                             <constraint firstItem="IPg-9U-m1G" firstAttribute="centerY" secondItem="6QX-vK-FGb" secondAttribute="centerY" id="Hdt-X5-zac"/>
                             <constraint firstItem="T3v-PK-nXt" firstAttribute="trailing" secondItem="IPg-9U-m1G" secondAttribute="trailing" id="IFq-ls-MO9"/>
-                            <constraint firstItem="HLp-Rd-WLH" firstAttribute="leading" secondItem="T3v-PK-nXt" secondAttribute="leading" id="IhF-No-lYv"/>
                             <constraint firstItem="6Qt-2W-wR0" firstAttribute="top" secondItem="IPg-9U-m1G" secondAttribute="bottom" constant="2" id="TTZ-Yj-Keu"/>
                             <constraint firstItem="IPg-9U-m1G" firstAttribute="leading" secondItem="6Qt-2W-wR0" secondAttribute="leading" id="dLX-aU-F07"/>
+                            <constraint firstItem="HLp-Rd-WLH" firstAttribute="leading" secondItem="6Qt-2W-wR0" secondAttribute="leading" id="eG3-w0-CKn"/>
                             <constraint firstItem="T3v-PK-nXt" firstAttribute="leading" secondItem="IPg-9U-m1G" secondAttribute="leading" id="ebI-BY-3V1"/>
                             <constraint firstItem="Nwl-DW-GxK" firstAttribute="top" secondItem="6QX-vK-FGb" secondAttribute="top" id="fDP-fc-wL8"/>
                             <constraint firstItem="Nwl-DW-GxK" firstAttribute="leading" secondItem="LEf-Sd-fD4" secondAttribute="leadingMargin" constant="-9" id="gdX-2k-a1R"/>
                             <constraint firstItem="6QX-vK-FGb" firstAttribute="leading" secondItem="Nwl-DW-GxK" secondAttribute="trailing" constant="8" symbolic="YES" id="hmu-5H-buN"/>
                             <constraint firstItem="Ogb-6S-49J" firstAttribute="top" secondItem="6Qt-2W-wR0" secondAttribute="bottom" constant="101" id="ktU-fa-Ndg"/>
-                            <constraint firstItem="HLp-Rd-WLH" firstAttribute="top" secondItem="T3v-PK-nXt" secondAttribute="top" id="ox6-SE-ou7"/>
                             <constraint firstItem="IPg-9U-m1G" firstAttribute="trailing" secondItem="6Qt-2W-wR0" secondAttribute="trailing" id="tc1-5V-Zry"/>
                             <constraint firstItem="T3v-PK-nXt" firstAttribute="top" secondItem="LEf-Sd-fD4" secondAttribute="top" id="wWO-an-qjX"/>
+                            <constraint firstItem="HLp-Rd-WLH" firstAttribute="trailing" secondItem="IPg-9U-m1G" secondAttribute="trailing" id="wlb-Qk-boS"/>
                             <constraint firstItem="T3v-PK-nXt" firstAttribute="bottom" secondItem="MMK-JZ-NEe" secondAttribute="bottom" id="wuX-ia-zTg"/>
-                            <constraint firstItem="HLp-Rd-WLH" firstAttribute="trailing" secondItem="6Qt-2W-wR0" secondAttribute="trailing" id="ylZ-9i-pA3"/>
                             <constraint firstItem="Nwl-DW-GxK" firstAttribute="top" secondItem="MMK-JZ-NEe" secondAttribute="bottom" constant="4" id="ysz-Nn-3bV"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="ingredientTextField" destination="Nwl-DW-GxK" id="faQ-kB-3yd"/>
+                        <outlet property="pantryTable" destination="6Qt-2W-wR0" id="gLi-HX-nh1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ka6-Gf-EdW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -223,23 +223,33 @@
             </objects>
             <point key="canvasLocation" x="828" y="832"/>
         </scene>
-        <!--Recipe List-->
-        <scene sceneID="2Lj-cZ-je1">
+        <!--Recipe List Table View Controller-->
+        <scene sceneID="W15-UL-B77">
             <objects>
-                <viewController id="4yP-af-s0k" userLabel="Recipe List" customClass="RecipeList" customModule="Fridgemate" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ET1-3j-c6H"/>
-                        <viewControllerLayoutGuide type="bottom" id="jGb-vG-aF1"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="9sk-Kp-zZg">
+                <tableViewController id="fWY-5s-Be8" customClass="RecipeListTableViewController" customModule="Fridgemate" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="91" sectionHeaderHeight="28" sectionFooterHeight="28" id="CbX-WA-7c8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j12-l0-67d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="91" id="Cyd-KL-AiS">
+                                <rect key="frame" x="0.0" y="92" width="375" height="91"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cyd-KL-AiS" id="TJy-GX-wAi">
+                                    <frame key="frameInset" width="375" height="90"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fWY-5s-Be8" id="Bs4-IM-DUa"/>
+                            <outlet property="delegate" destination="fWY-5s-Be8" id="XAo-UE-8HN"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hg5-7n-Msg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1593" y="831"/>
+            <point key="canvasLocation" x="1861.5999999999999" y="836.13193403298362"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tzx-AM-F0k">

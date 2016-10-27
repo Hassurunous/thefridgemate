@@ -1,18 +1,17 @@
 //
-//  PantryTableView.swift
+//  RecipeListTableViewController.swift
 //  Fridgemate
 //
-//  Created by MakeSchool on 10/25/16.
+//  Created by MakeSchool on 10/26/16.
 //  Copyright © 2016 Kadeem. All rights reserved.
 //
 
 import UIKit
 
-class PantryTableView: Pantry, UITableViewDelegate, UITableViewDataSource{
+class RecipeListTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -28,24 +27,16 @@ class PantryTableView: Pantry, UITableViewDelegate, UITableViewDataSource{
 
     // MARK: - Table view data source
 
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PantryTableViewCell
-        
-        cell.ingredientLabel.text = PantryManager.sharedInstance.pantryArray[indexPath.row]
-
-        
-        return cell
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 0
     }
 
-
-func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-    
-        
-    return PantryManager.sharedInstance.count
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return 0
     }
+
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
@@ -64,21 +55,17 @@ func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> 
     }
     */
 
-
+    /*
     // Override to support editing the table view.
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            
-            PantryManager.sharedInstance.remove(index: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-            
             // Delete the row from the data source
-//            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    
+    */
 
     /*
     // Override to support rearranging the table view.

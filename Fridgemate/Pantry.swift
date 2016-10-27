@@ -17,6 +17,7 @@ class Pantry: UIViewController {
     //MARK: - IB Outlets
     
     @IBOutlet weak var ingredientTextField: UITextField!
+    @IBOutlet weak var pantryTable: UITableView!
 
     //MARK: - IB Actions
     
@@ -27,7 +28,8 @@ class Pantry: UIViewController {
             for c in (ingredientTextField.text?.characters)! {
                 if c != " " {
                     text = text?.trimmingCharacters(in: CharacterSet.whitespaces)
-                    ingredientListArray.append(text!)
+                   // ingredientListArray.append(text!)
+                    PantryManager.sharedInstance.add(item: text!)
                     break
                 }
             }
@@ -36,8 +38,12 @@ class Pantry: UIViewController {
         ingredientTextField.text="";
         let pantryListString  = ingredientListArray.joined(separator: ",")
         userDefaults.set(pantryListString, forKey: "pantryList")
+        userDefaults.synchronize()
         print(ingredientListArray)
         
+        self.pantryTable.reloadData()
+        //Create an IBOulet for tableview
+        //self.pantryTableView.reloadData()
     }
     
     
@@ -56,7 +62,7 @@ class Pantry: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         navigationItem.title = "My Pantry"
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.2)
+        self.navigationController?.navigationBar.barTintColor = UIColor.brown
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
         
     }

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DD4DAFD41DBB473700D06B9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4DAFD31DBB473700D06B9E /* AppDelegate.swift */; };
-		DD4DAFD61DBB473700D06B9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4DAFD51DBB473700D06B9E /* ViewController.swift */; };
+		DD4DAFD61DBB473700D06B9E /* StartUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4DAFD51DBB473700D06B9E /* StartUpViewController.swift */; };
 		DD4DAFD91DBB473700D06B9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD4DAFD71DBB473700D06B9E /* Main.storyboard */; };
 		DD4DAFDC1DBB473700D06B9E /* Fridgemate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD4DAFDA1DBB473700D06B9E /* Fridgemate.xcdatamodeld */; };
 		DD4DAFDE1DBB473700D06B9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD4DAFDD1DBB473700D06B9E /* Assets.xcassets */; };
@@ -21,6 +21,9 @@
 		DD85A4091DBFE98600E0D6AE /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD85A4081DBFE98600E0D6AE /* MainMenu.swift */; };
 		DD85A40F1DC02C3700E0D6AE /* PantryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD85A40E1DC02C3700E0D6AE /* PantryTableViewCell.swift */; };
 		DDD68A151DC06BE20040111D /* PantryTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD68A141DC06BE20040111D /* PantryTableView.swift */; };
+		DDFC62D61DC17D2000E43D87 /* PantryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFC62D51DC17D2000E43D87 /* PantryManager.swift */; };
+		DDFC62D81DC1AFAA00E43D87 /* RecipeListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFC62D71DC1AFAA00E43D87 /* RecipeListTableViewController.swift */; };
+		DDFC62DC1DC1B36D00E43D87 /* RecipeListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFC62DB1DC1B36D00E43D87 /* RecipeListManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +46,7 @@
 /* Begin PBXFileReference section */
 		DD4DAFD01DBB473700D06B9E /* Fridgemate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fridgemate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD4DAFD31DBB473700D06B9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DD4DAFD51DBB473700D06B9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DD4DAFD51DBB473700D06B9E /* StartUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUpViewController.swift; sourceTree = "<group>"; };
 		DD4DAFD81DBB473700D06B9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD4DAFDB1DBB473700D06B9E /* Fridgemate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fridgemate.xcdatamodel; sourceTree = "<group>"; };
 		DD4DAFDD1DBB473700D06B9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,6 +64,9 @@
 		DD85A4081DBFE98600E0D6AE /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		DD85A40E1DC02C3700E0D6AE /* PantryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PantryTableViewCell.swift; sourceTree = "<group>"; };
 		DDD68A141DC06BE20040111D /* PantryTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PantryTableView.swift; sourceTree = "<group>"; };
+		DDFC62D51DC17D2000E43D87 /* PantryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PantryManager.swift; sourceTree = "<group>"; };
+		DDFC62D71DC1AFAA00E43D87 /* RecipeListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeListTableViewController.swift; sourceTree = "<group>"; };
+		DDFC62DB1DC1B36D00E43D87 /* RecipeListManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeListManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,13 +119,9 @@
 			children = (
 				DD4DAFD31DBB473700D06B9E /* AppDelegate.swift */,
 				DD4DAFD71DBB473700D06B9E /* Main.storyboard */,
-				DD4DAFD51DBB473700D06B9E /* ViewController.swift */,
-				DD85A4081DBFE98600E0D6AE /* MainMenu.swift */,
-				DD85A4021DBFE6DE00E0D6AE /* Pantry.swift */,
-				DDD68A141DC06BE20040111D /* PantryTableView.swift */,
-				DD85A40E1DC02C3700E0D6AE /* PantryTableViewCell.swift */,
-				DD85A4041DBFE72800E0D6AE /* GroceryList.swift */,
-				DD85A4061DBFE75B00E0D6AE /* RecipeList.swift */,
+				DDFC62DB1DC1B36D00E43D87 /* RecipeListManager.swift */,
+				DDFC62DA1DC1B07000E43D87 /* View Controllers */,
+				DDFC62D91DC1B00200E43D87 /* Pantry */,
 				DD4DAFDD1DBB473700D06B9E /* Assets.xcassets */,
 				DD4DAFDF1DBB473800D06B9E /* LaunchScreen.storyboard */,
 				DD4DAFE21DBB473800D06B9E /* Info.plist */,
@@ -144,6 +146,29 @@
 				DD4DAFF81DBB473800D06B9E /* Info.plist */,
 			);
 			path = FridgemateUITests;
+			sourceTree = "<group>";
+		};
+		DDFC62D91DC1B00200E43D87 /* Pantry */ = {
+			isa = PBXGroup;
+			children = (
+				DDFC62D51DC17D2000E43D87 /* PantryManager.swift */,
+				DDD68A141DC06BE20040111D /* PantryTableView.swift */,
+				DD85A40E1DC02C3700E0D6AE /* PantryTableViewCell.swift */,
+			);
+			name = Pantry;
+			sourceTree = "<group>";
+		};
+		DDFC62DA1DC1B07000E43D87 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DDFC62D71DC1AFAA00E43D87 /* RecipeListTableViewController.swift */,
+				DD4DAFD51DBB473700D06B9E /* StartUpViewController.swift */,
+				DD85A4081DBFE98600E0D6AE /* MainMenu.swift */,
+				DD85A4021DBFE6DE00E0D6AE /* Pantry.swift */,
+				DD85A4041DBFE72800E0D6AE /* GroceryList.swift */,
+				DD85A4061DBFE75B00E0D6AE /* RecipeList.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,11 +311,14 @@
 				DDD68A151DC06BE20040111D /* PantryTableView.swift in Sources */,
 				DD4DAFDC1DBB473700D06B9E /* Fridgemate.xcdatamodeld in Sources */,
 				DD85A4071DBFE75B00E0D6AE /* RecipeList.swift in Sources */,
+				DDFC62D61DC17D2000E43D87 /* PantryManager.swift in Sources */,
 				DD85A4091DBFE98600E0D6AE /* MainMenu.swift in Sources */,
+				DDFC62DC1DC1B36D00E43D87 /* RecipeListManager.swift in Sources */,
 				DD85A4031DBFE6DE00E0D6AE /* Pantry.swift in Sources */,
 				DD85A4051DBFE72800E0D6AE /* GroceryList.swift in Sources */,
 				DD85A40F1DC02C3700E0D6AE /* PantryTableViewCell.swift in Sources */,
-				DD4DAFD61DBB473700D06B9E /* ViewController.swift in Sources */,
+				DDFC62D81DC1AFAA00E43D87 /* RecipeListTableViewController.swift in Sources */,
+				DD4DAFD61DBB473700D06B9E /* StartUpViewController.swift in Sources */,
 				DD4DAFD41DBB473700D06B9E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
