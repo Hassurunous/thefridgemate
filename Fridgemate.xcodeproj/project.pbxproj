@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5943D4495516184589683852 /* Pods_Fridgemate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87FF3A0D8B6CA90DF2CE59CA /* Pods_Fridgemate.framework */; };
+		7DA17D927AAB4C609AAE6D3D /* libPods-FridgemateUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E6318C05A37D39EA3797135 /* libPods-FridgemateUITests.a */; };
+		C9353159037DE2435278A8D4 /* libPods-FridgemateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E54547CBE3EE8F15E019353 /* libPods-FridgemateTests.a */; };
 		DD4DAFD41DBB473700D06B9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4DAFD31DBB473700D06B9E /* AppDelegate.swift */; };
 		DD4DAFD61DBB473700D06B9E /* StartUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4DAFD51DBB473700D06B9E /* StartUpViewController.swift */; };
 		DD4DAFD91DBB473700D06B9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD4DAFD71DBB473700D06B9E /* Main.storyboard */; };
@@ -17,13 +20,13 @@
 		DD4DAFF71DBB473800D06B9E /* FridgemateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4DAFF61DBB473800D06B9E /* FridgemateUITests.swift */; };
 		DD85A4031DBFE6DE00E0D6AE /* Pantry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD85A4021DBFE6DE00E0D6AE /* Pantry.swift */; };
 		DD85A4051DBFE72800E0D6AE /* GroceryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD85A4041DBFE72800E0D6AE /* GroceryList.swift */; };
-		DD85A4071DBFE75B00E0D6AE /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD85A4061DBFE75B00E0D6AE /* RecipeList.swift */; };
 		DD85A4091DBFE98600E0D6AE /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD85A4081DBFE98600E0D6AE /* MainMenu.swift */; };
 		DD85A40F1DC02C3700E0D6AE /* PantryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD85A40E1DC02C3700E0D6AE /* PantryTableViewCell.swift */; };
 		DDD68A151DC06BE20040111D /* PantryTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD68A141DC06BE20040111D /* PantryTableView.swift */; };
 		DDFC62D61DC17D2000E43D87 /* PantryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFC62D51DC17D2000E43D87 /* PantryManager.swift */; };
 		DDFC62D81DC1AFAA00E43D87 /* RecipeListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFC62D71DC1AFAA00E43D87 /* RecipeListTableViewController.swift */; };
 		DDFC62DC1DC1B36D00E43D87 /* RecipeListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFC62DB1DC1B36D00E43D87 /* RecipeListManager.swift */; };
+		DDFC62E01DC1BCFC00E43D87 /* Pantry.png in Resources */ = {isa = PBXBuildFile; fileRef = DDFC62DF1DC1BCFC00E43D87 /* Pantry.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3811374F8754147606339911 /* Pods-FridgemateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FridgemateTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FridgemateTests/Pods-FridgemateTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4E54547CBE3EE8F15E019353 /* libPods-FridgemateTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FridgemateTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		507E1C13A9BB654D550FD613 /* Pods-Fridgemate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fridgemate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fridgemate/Pods-Fridgemate.debug.xcconfig"; sourceTree = "<group>"; };
+		66FD9105A798F2E199CC4264 /* Pods-FridgemateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FridgemateTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FridgemateTests/Pods-FridgemateTests.release.xcconfig"; sourceTree = "<group>"; };
+		87FF3A0D8B6CA90DF2CE59CA /* Pods_Fridgemate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fridgemate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E6318C05A37D39EA3797135 /* libPods-FridgemateUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FridgemateUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		97E64D1512B0C01290D42787 /* Pods-FridgemateUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FridgemateUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FridgemateUITests/Pods-FridgemateUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C11795D40FF69228A3328F79 /* Pods-Fridgemate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fridgemate.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fridgemate/Pods-Fridgemate.release.xcconfig"; sourceTree = "<group>"; };
+		D9B74745F13A7A8C5E969AC7 /* Pods-FridgemateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FridgemateUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FridgemateUITests/Pods-FridgemateUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DD4DAFD01DBB473700D06B9E /* Fridgemate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fridgemate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD4DAFD31DBB473700D06B9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD4DAFD51DBB473700D06B9E /* StartUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUpViewController.swift; sourceTree = "<group>"; };
@@ -60,13 +72,13 @@
 		DD4DAFF81DBB473800D06B9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD85A4021DBFE6DE00E0D6AE /* Pantry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pantry.swift; sourceTree = "<group>"; };
 		DD85A4041DBFE72800E0D6AE /* GroceryList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryList.swift; sourceTree = "<group>"; };
-		DD85A4061DBFE75B00E0D6AE /* RecipeList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeList.swift; sourceTree = "<group>"; };
 		DD85A4081DBFE98600E0D6AE /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		DD85A40E1DC02C3700E0D6AE /* PantryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PantryTableViewCell.swift; sourceTree = "<group>"; };
 		DDD68A141DC06BE20040111D /* PantryTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PantryTableView.swift; sourceTree = "<group>"; };
 		DDFC62D51DC17D2000E43D87 /* PantryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PantryManager.swift; sourceTree = "<group>"; };
 		DDFC62D71DC1AFAA00E43D87 /* RecipeListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeListTableViewController.swift; sourceTree = "<group>"; };
 		DDFC62DB1DC1B36D00E43D87 /* RecipeListManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeListManager.swift; sourceTree = "<group>"; };
+		DDFC62DF1DC1BCFC00E43D87 /* Pantry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pantry.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5943D4495516184589683852 /* Pods_Fridgemate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9353159037DE2435278A8D4 /* libPods-FridgemateTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,19 +102,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DA17D927AAB4C609AAE6D3D /* libPods-FridgemateUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34C4AEAE36B833E854CDAC6D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				507E1C13A9BB654D550FD613 /* Pods-Fridgemate.debug.xcconfig */,
+				C11795D40FF69228A3328F79 /* Pods-Fridgemate.release.xcconfig */,
+				3811374F8754147606339911 /* Pods-FridgemateTests.debug.xcconfig */,
+				66FD9105A798F2E199CC4264 /* Pods-FridgemateTests.release.xcconfig */,
+				97E64D1512B0C01290D42787 /* Pods-FridgemateUITests.debug.xcconfig */,
+				D9B74745F13A7A8C5E969AC7 /* Pods-FridgemateUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DD4DAFC71DBB473600D06B9E = {
 			isa = PBXGroup;
 			children = (
+				DDFC62DF1DC1BCFC00E43D87 /* Pantry.png */,
 				DD4DAFD21DBB473700D06B9E /* Fridgemate */,
 				DD4DAFEA1DBB473800D06B9E /* FridgemateTests */,
 				DD4DAFF51DBB473800D06B9E /* FridgemateUITests */,
 				DD4DAFD11DBB473700D06B9E /* Products */,
+				34C4AEAE36B833E854CDAC6D /* Pods */,
+				FD02DAA390CB97275E63E3D3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,7 +150,7 @@
 			children = (
 				DD4DAFD31DBB473700D06B9E /* AppDelegate.swift */,
 				DD4DAFD71DBB473700D06B9E /* Main.storyboard */,
-				DDFC62DB1DC1B36D00E43D87 /* RecipeListManager.swift */,
+				DDA85C401DC1F9D70016ADB6 /* RecipeList */,
 				DDFC62DA1DC1B07000E43D87 /* View Controllers */,
 				DDFC62D91DC1B00200E43D87 /* Pantry */,
 				DD4DAFDD1DBB473700D06B9E /* Assets.xcassets */,
@@ -148,9 +179,19 @@
 			path = FridgemateUITests;
 			sourceTree = "<group>";
 		};
+		DDA85C401DC1F9D70016ADB6 /* RecipeList */ = {
+			isa = PBXGroup;
+			children = (
+				DDFC62DB1DC1B36D00E43D87 /* RecipeListManager.swift */,
+				DDFC62D71DC1AFAA00E43D87 /* RecipeListTableViewController.swift */,
+			);
+			name = RecipeList;
+			sourceTree = "<group>";
+		};
 		DDFC62D91DC1B00200E43D87 /* Pantry */ = {
 			isa = PBXGroup;
 			children = (
+				DD85A4021DBFE6DE00E0D6AE /* Pantry.swift */,
 				DDFC62D51DC17D2000E43D87 /* PantryManager.swift */,
 				DDD68A141DC06BE20040111D /* PantryTableView.swift */,
 				DD85A40E1DC02C3700E0D6AE /* PantryTableViewCell.swift */,
@@ -161,14 +202,21 @@
 		DDFC62DA1DC1B07000E43D87 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DDFC62D71DC1AFAA00E43D87 /* RecipeListTableViewController.swift */,
 				DD4DAFD51DBB473700D06B9E /* StartUpViewController.swift */,
 				DD85A4081DBFE98600E0D6AE /* MainMenu.swift */,
-				DD85A4021DBFE6DE00E0D6AE /* Pantry.swift */,
 				DD85A4041DBFE72800E0D6AE /* GroceryList.swift */,
-				DD85A4061DBFE75B00E0D6AE /* RecipeList.swift */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FD02DAA390CB97275E63E3D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87FF3A0D8B6CA90DF2CE59CA /* Pods_Fridgemate.framework */,
+				4E54547CBE3EE8F15E019353 /* libPods-FridgemateTests.a */,
+				8E6318C05A37D39EA3797135 /* libPods-FridgemateUITests.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,9 +226,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD4DAFFB1DBB473800D06B9E /* Build configuration list for PBXNativeTarget "Fridgemate" */;
 			buildPhases = (
+				E41CD54917AB9A211A3A567F /* [CP] Check Pods Manifest.lock */,
 				DD4DAFCC1DBB473700D06B9E /* Sources */,
 				DD4DAFCD1DBB473700D06B9E /* Frameworks */,
 				DD4DAFCE1DBB473700D06B9E /* Resources */,
+				804FC8CD4DC07C23DDFEFD90 /* [CP] Embed Pods Frameworks */,
+				D9B7126C52F8A44378844C02 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,9 +246,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD4DAFFE1DBB473800D06B9E /* Build configuration list for PBXNativeTarget "FridgemateTests" */;
 			buildPhases = (
+				2578698E8671CF51C09C1F3D /* [CP] Check Pods Manifest.lock */,
 				DD4DAFE31DBB473800D06B9E /* Sources */,
 				DD4DAFE41DBB473800D06B9E /* Frameworks */,
 				DD4DAFE51DBB473800D06B9E /* Resources */,
+				5BDC9A1E3B54D974F52D80FB /* [CP] Embed Pods Frameworks */,
+				7DC5118345162AC128B5A858 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,9 +267,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD4DB0011DBB473800D06B9E /* Build configuration list for PBXNativeTarget "FridgemateUITests" */;
 			buildPhases = (
+				E05107B4196FD9BE82AE2278 /* [CP] Check Pods Manifest.lock */,
 				DD4DAFEE1DBB473800D06B9E /* Sources */,
 				DD4DAFEF1DBB473800D06B9E /* Frameworks */,
 				DD4DAFF01DBB473800D06B9E /* Resources */,
+				FF353ABC449B3E0F78595B60 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -284,6 +340,7 @@
 				DD4DAFE11DBB473800D06B9E /* LaunchScreen.storyboard in Resources */,
 				DD4DAFDE1DBB473700D06B9E /* Assets.xcassets in Resources */,
 				DD4DAFD91DBB473700D06B9E /* Main.storyboard in Resources */,
+				DDFC62E01DC1BCFC00E43D87 /* Pantry.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +360,129 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2578698E8671CF51C09C1F3D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5BDC9A1E3B54D974F52D80FB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FridgemateTests/Pods-FridgemateTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DC5118345162AC128B5A858 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FridgemateTests/Pods-FridgemateTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		804FC8CD4DC07C23DDFEFD90 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fridgemate/Pods-Fridgemate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9B7126C52F8A44378844C02 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fridgemate/Pods-Fridgemate-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E05107B4196FD9BE82AE2278 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E41CD54917AB9A211A3A567F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FF353ABC449B3E0F78595B60 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FridgemateUITests/Pods-FridgemateUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DD4DAFCC1DBB473700D06B9E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -310,7 +490,6 @@
 			files = (
 				DDD68A151DC06BE20040111D /* PantryTableView.swift in Sources */,
 				DD4DAFDC1DBB473700D06B9E /* Fridgemate.xcdatamodeld in Sources */,
-				DD85A4071DBFE75B00E0D6AE /* RecipeList.swift in Sources */,
 				DDFC62D61DC17D2000E43D87 /* PantryManager.swift in Sources */,
 				DD85A4091DBFE98600E0D6AE /* MainMenu.swift in Sources */,
 				DDFC62DC1DC1B36D00E43D87 /* RecipeListManager.swift in Sources */,
@@ -392,6 +571,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -442,6 +622,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -469,7 +650,9 @@
 		};
 		DD4DAFFC1DBB473800D06B9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 507E1C13A9BB654D550FD613 /* Pods-Fridgemate.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7G8EV52YPP;
 				INFOPLIST_FILE = Fridgemate/Info.plist;
@@ -482,7 +665,9 @@
 		};
 		DD4DAFFD1DBB473800D06B9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C11795D40FF69228A3328F79 /* Pods-Fridgemate.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7G8EV52YPP;
 				INFOPLIST_FILE = Fridgemate/Info.plist;
@@ -495,6 +680,7 @@
 		};
 		DD4DAFFF1DBB473800D06B9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3811374F8754147606339911 /* Pods-FridgemateTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -510,6 +696,7 @@
 		};
 		DD4DB0001DBB473800D06B9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66FD9105A798F2E199CC4264 /* Pods-FridgemateTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -525,6 +712,7 @@
 		};
 		DD4DB0021DBB473800D06B9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97E64D1512B0C01290D42787 /* Pods-FridgemateUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 7G8EV52YPP;
@@ -539,6 +727,7 @@
 		};
 		DD4DB0031DBB473800D06B9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9B74745F13A7A8C5E969AC7 /* Pods-FridgemateUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 7G8EV52YPP;

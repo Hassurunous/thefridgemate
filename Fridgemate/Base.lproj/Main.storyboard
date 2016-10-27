@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -111,7 +112,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PantryBG_" translatesAutoresizingMaskIntoConstraints="NO" id="HLp-Rd-WLH"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pantry.png" translatesAutoresizingMaskIntoConstraints="NO" id="HLp-Rd-WLH"/>
                             <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IPg-9U-m1G" userLabel="BlackBG">
                                 <color key="backgroundColor" red="0.44372620558375631" green="0.44372620558375631" blue="0.44372620558375631" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
@@ -143,7 +144,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Qt-2W-wR0">
                                 <color key="backgroundColor" white="1" alpha="0.39718000856164382" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="69" id="c5r-2B-1Uw" customClass="PantryTableViewCell" customModule="Fridgemate" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" editingAccessoryType="checkmark" rowHeight="69" id="c5r-2B-1Uw" customClass="PantryTableViewCell" customModule="Fridgemate" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="69"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c5r-2B-1Uw" id="t0n-Aq-3GZ">
@@ -172,28 +173,51 @@
                                     <outlet property="delegate" destination="kye-zV-ggT" id="MVm-ja-4Qn"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2H-wU-iOJ" userLabel="RecipeSearchButton">
+                                <connections>
+                                    <action selector="recipeSearchButtonTapped:" destination="kye-zV-ggT" eventType="touchUpInside" id="kSX-vG-Ri6"/>
+                                    <segue destination="fWY-5s-Be8" kind="show" id="zHG-nm-pjx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDK-5S-lQ3" userLabel="ClearButton">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="188" id="4nN-ak-kd5"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="clearButtonTapped:" destination="kye-zV-ggT" eventType="touchUpInside" id="g43-6q-QtT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="6Qt-2W-wR0" firstAttribute="trailing" secondItem="IPg-9U-m1G" secondAttribute="trailing" id="28w-8J-xeJ"/>
                             <constraint firstItem="IPg-9U-m1G" firstAttribute="top" secondItem="MMK-JZ-NEe" secondAttribute="bottom" id="3IZ-pu-45P"/>
+                            <constraint firstItem="HLp-Rd-WLH" firstAttribute="top" secondItem="T3v-PK-nXt" secondAttribute="top" id="3eX-WS-pT7"/>
                             <constraint firstItem="6QX-vK-FGb" firstAttribute="trailing" secondItem="LEf-Sd-fD4" secondAttribute="trailingMargin" id="49X-F9-z16"/>
                             <constraint firstItem="T3v-PK-nXt" firstAttribute="leading" secondItem="LEf-Sd-fD4" secondAttribute="leading" id="4RO-qk-ec7"/>
-                            <constraint firstItem="HLp-Rd-WLH" firstAttribute="top" secondItem="T3v-PK-nXt" secondAttribute="top" id="51w-Vw-7aQ"/>
+                            <constraint firstItem="HLp-Rd-WLH" firstAttribute="leading" secondItem="IPg-9U-m1G" secondAttribute="leading" id="7AL-Ye-hWw"/>
+                            <constraint firstItem="TDK-5S-lQ3" firstAttribute="firstBaseline" secondItem="a2H-wU-iOJ" secondAttribute="firstBaseline" id="CCq-lG-mqB"/>
+                            <constraint firstItem="HLp-Rd-WLH" firstAttribute="trailing" secondItem="6Qt-2W-wR0" secondAttribute="trailing" id="CET-Go-NCc"/>
+                            <constraint firstItem="Ogb-6S-49J" firstAttribute="top" secondItem="TDK-5S-lQ3" secondAttribute="bottom" constant="8" symbolic="YES" id="Ccp-Hr-01G"/>
                             <constraint firstItem="IPg-9U-m1G" firstAttribute="centerY" secondItem="6QX-vK-FGb" secondAttribute="centerY" id="Hdt-X5-zac"/>
+                            <constraint firstItem="Ogb-6S-49J" firstAttribute="top" secondItem="6Qt-2W-wR0" secondAttribute="bottom" constant="81" id="Hx6-3e-eKj"/>
                             <constraint firstItem="T3v-PK-nXt" firstAttribute="trailing" secondItem="IPg-9U-m1G" secondAttribute="trailing" id="IFq-ls-MO9"/>
-                            <constraint firstItem="6Qt-2W-wR0" firstAttribute="top" secondItem="IPg-9U-m1G" secondAttribute="bottom" constant="2" id="TTZ-Yj-Keu"/>
-                            <constraint firstItem="IPg-9U-m1G" firstAttribute="leading" secondItem="6Qt-2W-wR0" secondAttribute="leading" id="dLX-aU-F07"/>
-                            <constraint firstItem="HLp-Rd-WLH" firstAttribute="leading" secondItem="6Qt-2W-wR0" secondAttribute="leading" id="eG3-w0-CKn"/>
+                            <constraint firstItem="TDK-5S-lQ3" firstAttribute="top" secondItem="a2H-wU-iOJ" secondAttribute="top" id="ODk-2s-kuZ"/>
+                            <constraint firstItem="6Qt-2W-wR0" firstAttribute="top" secondItem="IPg-9U-m1G" secondAttribute="bottom" constant="2" id="OxS-OL-rS5"/>
+                            <constraint firstItem="TDK-5S-lQ3" firstAttribute="baseline" secondItem="a2H-wU-iOJ" secondAttribute="baseline" id="VWh-7W-km0"/>
                             <constraint firstItem="T3v-PK-nXt" firstAttribute="leading" secondItem="IPg-9U-m1G" secondAttribute="leading" id="ebI-BY-3V1"/>
                             <constraint firstItem="Nwl-DW-GxK" firstAttribute="top" secondItem="6QX-vK-FGb" secondAttribute="top" id="fDP-fc-wL8"/>
+                            <constraint firstItem="6Qt-2W-wR0" firstAttribute="leading" secondItem="IPg-9U-m1G" secondAttribute="leading" id="faG-li-Npw"/>
                             <constraint firstItem="Nwl-DW-GxK" firstAttribute="leading" secondItem="LEf-Sd-fD4" secondAttribute="leadingMargin" constant="-9" id="gdX-2k-a1R"/>
                             <constraint firstItem="6QX-vK-FGb" firstAttribute="leading" secondItem="Nwl-DW-GxK" secondAttribute="trailing" constant="8" symbolic="YES" id="hmu-5H-buN"/>
-                            <constraint firstItem="Ogb-6S-49J" firstAttribute="top" secondItem="6Qt-2W-wR0" secondAttribute="bottom" constant="101" id="ktU-fa-Ndg"/>
-                            <constraint firstItem="IPg-9U-m1G" firstAttribute="trailing" secondItem="6Qt-2W-wR0" secondAttribute="trailing" id="tc1-5V-Zry"/>
+                            <constraint firstItem="a2H-wU-iOJ" firstAttribute="leading" secondItem="TDK-5S-lQ3" secondAttribute="trailing" constant="2" id="qm8-a5-mZA"/>
+                            <constraint firstItem="TDK-5S-lQ3" firstAttribute="top" secondItem="6Qt-2W-wR0" secondAttribute="bottom" constant="8" symbolic="YES" id="tJn-f8-vhj"/>
+                            <constraint firstItem="TDK-5S-lQ3" firstAttribute="bottom" secondItem="a2H-wU-iOJ" secondAttribute="bottom" id="tfz-09-gcL"/>
                             <constraint firstItem="T3v-PK-nXt" firstAttribute="top" secondItem="LEf-Sd-fD4" secondAttribute="top" id="wWO-an-qjX"/>
-                            <constraint firstItem="HLp-Rd-WLH" firstAttribute="trailing" secondItem="IPg-9U-m1G" secondAttribute="trailing" id="wlb-Qk-boS"/>
                             <constraint firstItem="T3v-PK-nXt" firstAttribute="bottom" secondItem="MMK-JZ-NEe" secondAttribute="bottom" id="wuX-ia-zTg"/>
+                            <constraint firstItem="TDK-5S-lQ3" firstAttribute="leading" secondItem="6Qt-2W-wR0" secondAttribute="leading" id="xeW-LP-D3O"/>
                             <constraint firstItem="Nwl-DW-GxK" firstAttribute="top" secondItem="MMK-JZ-NEe" secondAttribute="bottom" constant="4" id="ysz-Nn-3bV"/>
+                            <constraint firstItem="HLp-Rd-WLH" firstAttribute="trailing" secondItem="a2H-wU-iOJ" secondAttribute="trailing" id="zjS-IB-KNC"/>
                         </constraints>
                     </view>
                     <connections>
@@ -236,7 +260,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="91"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cyd-KL-AiS" id="TJy-GX-wAi">
-                                    <frame key="frameInset" width="375" height="90"/>
+                                    <frame key="frameInset" width="375" height="91"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -272,7 +296,10 @@
     </scenes>
     <resources>
         <image name="FridgemateStartUpScreeenBG" width="375" height="667"/>
-        <image name="PantryBG_" width="375" height="667"/>
+        <image name="Pantry.png" width="375" height="667"/>
         <image name="mainMenuF" width="375" height="667"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="zHG-nm-pjx"/>
+    </inferredMetricsTieBreakers>
 </document>

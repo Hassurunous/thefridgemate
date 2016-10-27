@@ -39,13 +39,20 @@ class Pantry: UIViewController {
         let pantryListString  = ingredientListArray.joined(separator: ",")
         userDefaults.set(pantryListString, forKey: "pantryList")
         userDefaults.synchronize()
-        print(ingredientListArray)
+        //print(ingredientListArray)
         
         self.pantryTable.reloadData()
         //Create an IBOulet for tableview
         //self.pantryTableView.reloadData()
     }
+   
     
+    @IBAction func clearButtonTapped(_ sender: UIButton) {
+        PantryManager.sharedInstance.clear()
+        self.pantryTable.reloadData()
+        
+    
+    }
     
     //MARK: - Initial setup
 

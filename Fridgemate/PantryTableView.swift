@@ -10,6 +10,9 @@ import UIKit
 
 class PantryTableView: Pantry, UITableViewDelegate, UITableViewDataSource{
 
+    @IBAction func recipeSearchButtonTapped(_ sender: UIButton) {
+         RecipeListManager.sharedInstance.RecipeSearch()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,7 +21,7 @@ class PantryTableView: Pantry, UITableViewDelegate, UITableViewDataSource{
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+         //self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     override func didReceiveMemoryWarning() {

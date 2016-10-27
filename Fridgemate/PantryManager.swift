@@ -39,6 +39,10 @@ class PantryManager {
         
         
     }
+    func clear() {
+        pantryArray = []
+        save()
+    }
     
     init() {
         load()
