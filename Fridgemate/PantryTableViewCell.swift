@@ -8,7 +8,15 @@
 
 import UIKit
 
+protocol PantryTableViewCellDelegate: class {
+    func sliderValueChanged(value: Float)
+}
+
 class PantryTableViewCell: UITableViewCell {
+    
+    
+    @IBOutlet weak var slider: UISlider!
+    weak var delegate: PantryTableViewCellDelegate?
 
 
     @IBOutlet weak var ingredientLabel: UILabel!
@@ -23,4 +31,7 @@ class PantryTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func sliderValueChanged(_ sender: UISlider) {
+        delegate?.sliderValueChanged(value: sender.value)
+    }
 }

@@ -35,7 +35,13 @@ class PantryManager {
     func load() {
         //loads pantryArray from nsuserdefaults
         
-        pantryArray = UserDefaults.standard.object(forKey: "pantryArray")! as! [String]
+        //how to apply if let here
+        ///
+        ///
+        ////
+        if let pantryArray = UserDefaults.standard.object(forKey: "pantryArray") as? [String] {
+            self.pantryArray = pantryArray
+        }
         
         
     }

@@ -156,15 +156,28 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="6EG-G1-Eu6">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="151" id="zLO-tb-IWN"/>
+                                                    </constraints>
+                                                    <color key="minimumTrackTintColor" red="0.19025640087801671" green="0.6875" blue="0.15958389611677296" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="maximumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <connections>
+                                                        <action selector="sliderValueChanged:" destination="c5r-2B-1Uw" eventType="valueChanged" id="WHK-x1-Lzh"/>
+                                                    </connections>
+                                                </slider>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="6EG-G1-Eu6" firstAttribute="centerY" secondItem="Ezc-Ho-CJT" secondAttribute="centerY" id="H9t-ZD-cbK"/>
                                                 <constraint firstItem="Ezc-Ho-CJT" firstAttribute="leading" secondItem="t0n-Aq-3GZ" secondAttribute="leadingMargin" id="iZm-qA-K6S"/>
                                                 <constraint firstItem="Ezc-Ho-CJT" firstAttribute="centerY" secondItem="t0n-Aq-3GZ" secondAttribute="centerY" id="mZo-PK-heD"/>
+                                                <constraint firstItem="6EG-G1-Eu6" firstAttribute="trailing" secondItem="t0n-Aq-3GZ" secondAttribute="trailingMargin" id="qX7-AU-luN"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="0.3595087756849315" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="ingredientLabel" destination="Ezc-Ho-CJT" id="uaf-rd-hKB"/>
+                                            <outlet property="slider" destination="6EG-G1-Eu6" id="7Fj-Z8-ee7"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -256,13 +269,62 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="91" id="Cyd-KL-AiS">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="91" id="Cyd-KL-AiS" customClass="RecipeListTableViewCell" customModule="Fridgemate" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="375" height="91"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cyd-KL-AiS" id="TJy-GX-wAi">
-                                    <frame key="frameInset" width="375" height="91"/>
+                                    <frame key="frameInset" width="375" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CsP-zJ-D47">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="91" id="Cqk-c8-gIT"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47D-aT-BJC">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="gpW-os-T0h"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients Used:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAW-gP-mgW">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="QgN-zD-OTt"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients Missing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dha-Dr-hxs">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="CsP-zJ-D47" firstAttribute="top" secondItem="TJy-GX-wAi" secondAttribute="top" id="1ut-NR-Sgr"/>
+                                        <constraint firstItem="47D-aT-BJC" firstAttribute="leading" secondItem="sAW-gP-mgW" secondAttribute="leading" id="3Hw-YL-73e"/>
+                                        <constraint firstItem="47D-aT-BJC" firstAttribute="top" secondItem="TJy-GX-wAi" secondAttribute="topMargin" id="4U1-sB-qak"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="47D-aT-BJC" secondAttribute="trailing" constant="23" id="5Tj-AW-QE5"/>
+                                        <constraint firstItem="dha-Dr-hxs" firstAttribute="top" secondItem="sAW-gP-mgW" secondAttribute="bottom" constant="3" id="62B-uN-SCw"/>
+                                        <constraint firstItem="sAW-gP-mgW" firstAttribute="trailing" secondItem="dha-Dr-hxs" secondAttribute="trailing" id="7dI-7q-CCh"/>
+                                        <constraint firstItem="CsP-zJ-D47" firstAttribute="leading" secondItem="TJy-GX-wAi" secondAttribute="leading" id="JkJ-un-aR7"/>
+                                        <constraint firstItem="CsP-zJ-D47" firstAttribute="centerY" secondItem="TJy-GX-wAi" secondAttribute="centerY" id="Ltw-e5-iXx"/>
+                                        <constraint firstItem="47D-aT-BJC" firstAttribute="trailing" secondItem="sAW-gP-mgW" secondAttribute="trailing" id="QnF-RH-QIj"/>
+                                        <constraint firstItem="sAW-gP-mgW" firstAttribute="top" secondItem="47D-aT-BJC" secondAttribute="bottom" constant="8" symbolic="YES" id="jSS-0f-vxW"/>
+                                        <constraint firstItem="47D-aT-BJC" firstAttribute="leading" secondItem="CsP-zJ-D47" secondAttribute="trailing" constant="3" id="kD8-Zx-rQN"/>
+                                        <constraint firstItem="sAW-gP-mgW" firstAttribute="leading" secondItem="dha-Dr-hxs" secondAttribute="leading" id="kYq-zG-ydM"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="dha-Dr-hxs" secondAttribute="bottom" constant="-0.5" id="rR3-i7-5hD"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="ingredientsMissingLabel" destination="dha-Dr-hxs" id="3Qy-Yb-BUz"/>
+                                    <outlet property="ingredientsUsedLabel" destination="sAW-gP-mgW" id="Cjf-fr-z1z"/>
+                                    <outlet property="recipeImage" destination="CsP-zJ-D47" id="i9L-QO-wa1"/>
+                                    <outlet property="recipeTitleLabel" destination="47D-aT-BJC" id="fyt-Fh-yOx"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -274,6 +336,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hg5-7n-Msg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1861.5999999999999" y="836.13193403298362"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="YjT-rJ-mAg">
+            <objects>
+                <viewController id="JLx-XD-LZJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ewk-8P-HqQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="1wr-vE-qWR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dnZ-mc-gbj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZJV-ak-Nql" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2492" y="836"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tzx-AM-F0k">

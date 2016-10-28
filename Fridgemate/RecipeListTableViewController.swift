@@ -8,12 +8,15 @@
 
 import UIKit
 
-class RecipeListTableViewController: UITableViewController {
+class RecipeListTableViewController: UITableViewController, RecipeManagerDelegate {
+    // let recipeData = RecipeListManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
        // RecipeListManager.sharedInstance.RecipeSearch()
          self.navigationController?.isNavigationBarHidden = (false)
+        RecipeListManager.sharedInstance.delegate = self
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -22,7 +25,14 @@ class RecipeListTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
-
+    
+    
+    func didLoadRecipes() {
+        print("Did load recipes!!!!!")
+        tableView.reloadData()
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -30,6 +40,29 @@ class RecipeListTableViewController: UITableViewController {
 
 
     // MARK: - Table view data source
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! RecipeListTableViewCell
+        
+        let recipe = RecipeListManager.sharedInstance.savedRecipeArray[indexPath.row]
+        
+        cell.recipeTitleLabel.text = recipe.title
+        cell.ingredientsUsedLabel.text = "Ingredients Used:\(recipe.ingredientsUsed)"
+        cell.ingredientsMissingLabel.text = "Ingredients Missing:\(recipe.ingredientsMissing)"
+        let url = URL(string: recipe.image)
+        let session = URLSession.shared.dataTask(with: url!) {(data,response, error) in
+            let image = UIImage(data: data!)
+            DispatchQueue.main.async {
+                cell.recipeImage.image = image
+                cell.setNeedsLayout()
+            }
+        }
+
+    session.resume()
+        
+        // Configure the cell...
+        
+        return cell
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -38,18 +71,11 @@ class RecipeListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return RecipeListManager.sharedInstance.recipeList.count
-    }
+        return RecipeListManager.sharedInstance.savedRecipeArray.count
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+   
 
-        // Configure the cell...
-
-        return cell
-    }
-    */
+   
 
     /*
     // Override to support conditional editing of the table view.
@@ -96,4 +122,5 @@ class RecipeListTableViewController: UITableViewController {
     }
     */
 
+}
 }

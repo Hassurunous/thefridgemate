@@ -11,14 +11,20 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
+protocol RecipeManagerDelegate {
+    func didLoadRecipes()
+}
+
 class RecipeListManager {
     static let sharedInstance = RecipeListManager()
+    var delegate:RecipeManagerDelegate?
     
-//    var recipeList = UserDefaults.standard.object(forKey: "savedRecipeList")! as! [String]
+    
     
     let complexURL = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/searchComplex"
-  
-
+    var savedRecipeArray = [RecipeResultStruct]()
+    
+    
     
     func RecipeSearch() {
         PantryManager.sharedInstance.load()
@@ -28,37 +34,48 @@ class RecipeListManager {
         ]
         let params = [
             "includeIngredients":"\(PantryManager.sharedInstance.pantryArray)",
-            "fillIngredients":"true"
+            
         ]
         _ =  Alamofire.request(complexURL,parameters: params, headers: headers).validate().responseJSON() { response in
             switch response.result {
             case .success:
+                
+                
                 if let value = response.result.value {
                     let recipeData = JSON(value)
                     
-                    //                     var savedRecipeList: [String] = self.userDefaults.objectForKey("savedRecipeList") as! [String]
-                    // print(recipeData)
-                    let allRecipeData = recipeData["results"].arrayValue
-                    var recipeArray: [String] = []
-                    for i in 0..<allRecipeData.count {
-                        
-                        let title = allRecipeData[i]["title"].rawString()
-                        
-                        //   let allRecipeData = recipeData["results"][i]
-                        // let tRecipes = RecipeTitle(json: allRecipeData[i])
-                        // let tRecipes = RecipeData(json:recipeData )
-                        recipeArray.append(title!)
+                    //print(recipeData)
+                    print("-------------")
+                    print("-------------")
+                    
+                    let allRecipeData = recipeData["results"].array!
+                    //   print(allRecipeData)
+                    let recipeArray: [String] = []
+                    
+                    for recipe in allRecipeData {
+                        let title = recipe["title"].string!
+                        let image = recipe["image"].string!
+                        let ingredientsUsed = recipe["usedIngredientCount"].int!
+                        let ingredientsMissed = recipe["missedIngredientCount"].int!
+                        let id = recipe["id"].int!
+                        self.savedRecipeArray.append(RecipeResultStruct(title: title, id: id, image: image, ingredientsUsed: ingredientsUsed, ingredientsMissing: ingredientsMissed))
                         
                         
                     }
-    //                let placeholder = recipeArray
+                    
+                   
+                    print(self.delegate)
+                    
+                    if let delegate = self.delegate {
+                        delegate.didLoadRecipes()
+                    }
                     
                     let recipeListString  = recipeArray.joined(separator: ",")
-      //              UserDefaults.standard.set(recipeListString, forKey:"recipeList")
-   //                UserDefaults.standard.set(recipeArray, forKey: "savedRecipeList")
+                    UserDefaults.standard.set(recipeListString, forKey:"recipeList")
+                    // UserDefaults.standard.set(self.savedRecipeArray, forKey: "savedRecipeList")
                     
-                    print(recipeListString)
-                    print("____________________")
+                    //                    print(recipeListString)
+                    //                    print("____________________")
                     
                     
                 }
@@ -73,7 +90,8 @@ class RecipeListManager {
             }
         }
     }
-    }
-    
-   
+    // var recipeList = UserDefaults.standard.object(forKey: "savedRecipeList")! as! [String]
+}
+
+
 
