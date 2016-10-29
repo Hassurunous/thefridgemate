@@ -23,7 +23,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvD-u2-aGz">
                                 <state key="normal" backgroundImage="FridgemateStartUpScreeenBG"/>
                                 <connections>
-                                    <segue destination="h1R-co-BhC" kind="show" id="jcM-8o-hj9"/>
+                                    <segue destination="mXX-Tf-vlp" kind="show" id="azy-ug-GcW"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TAP TO CONTINUE!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGY-ZT-FTy">
@@ -50,6 +50,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2054" y="151"/>
         </scene>
         <!--My Pantry-->
         <scene sceneID="SOF-zk-li8">
@@ -140,7 +141,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2H-wU-iOJ" userLabel="RecipeSearchButton">
                                 <connections>
                                     <action selector="recipeSearchButtonTapped:" destination="kye-zV-ggT" eventType="touchUpInside" id="kSX-vG-Ri6"/>
-                                    <segue destination="fWY-5s-Be8" kind="show" id="3xr-6q-OB9"/>
+                                    <segue destination="fWY-5s-Be8" kind="show" id="MWE-Rf-awo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDK-5S-lQ3" userLabel="ClearButton">
@@ -192,7 +193,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ka6-Gf-EdW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4671.1999999999998" y="150.67466266866569"/>
+            <point key="canvasLocation" x="6549.6000000000004" y="150.67466266866569"/>
         </scene>
         <!--Grocery List-->
         <scene sceneID="0Yx-cQ-ymX">
@@ -288,7 +289,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hg5-7n-Msg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3740" y="836.13193403298362"/>
+            <point key="canvasLocation" x="5618.3999999999996" y="836.13193403298362"/>
         </scene>
         <!--Recipe List View Controller-->
         <scene sceneID="YjT-rJ-mAg">
@@ -404,63 +405,63 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZJV-ak-Nql" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4623.1999999999998" y="884.70764617691157"/>
+            <point key="canvasLocation" x="1636" y="1227"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="LG5-Cc-lmJ">
+        <scene sceneID="Nyu-yR-5GP">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KRG-s6-hHc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="amh-Xk-BVF"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AdN-Jt-ShO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="jPC-Gu-WHe"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kO3-SW-5sQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fO6-dY-dQg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="kye-zV-ggT" kind="relationship" relationship="rootViewController" id="pcU-54-p0g"/>
+                        <segue destination="kye-zV-ggT" kind="relationship" relationship="rootViewController" id="ABr-JC-mXe"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nXi-R0-B9H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8A4-cv-g2B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3732" y="150.67466266866569"/>
+            <point key="canvasLocation" x="5610.3999999999996" y="150.67466266866569"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="dIr-B8-Hsm">
+        <scene sceneID="Exh-XY-5LO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="zuw-GW-DtN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="gr6-4M-mbr"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cjd-Gc-YiI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="IAt-5g-bce"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v07-56-BCj">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zIt-ug-ZgY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="fWY-5s-Be8" kind="relationship" relationship="rootViewController" id="V1Z-eL-MX9"/>
+                        <segue destination="fWY-5s-Be8" kind="relationship" relationship="rootViewController" id="4Rk-Ng-AfP"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VZ2-Ra-Pgg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uEP-Ia-aFb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2800.8000000000002" y="836.13193403298362"/>
+            <point key="canvasLocation" x="4679.1999999999998" y="836.13193403298362"/>
         </scene>
         <!--Tab Bar Controller-->
-        <scene sceneID="26S-zf-0Tt">
+        <scene sceneID="yeN-vx-WO5">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="h1R-co-BhC" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="mXX-Tf-vlp" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="aPV-MK-9c3">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="4FX-vH-e8d">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="KRG-s6-hHc" kind="relationship" relationship="viewControllers" id="sju-vY-ghy"/>
-                        <segue destination="zuw-GW-DtN" kind="relationship" relationship="viewControllers" id="BDz-Bf-bAc"/>
+                        <segue destination="AdN-Jt-ShO" kind="relationship" relationship="viewControllers" id="Z2e-kY-7oU"/>
+                        <segue destination="cjd-Gc-YiI" kind="relationship" relationship="viewControllers" id="yMn-hM-dao"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QHO-8M-Osi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Sx-Hu-shR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1861.5999999999999" y="493.40329835082463"/>
+            <point key="canvasLocation" x="3740" y="493.40329835082463"/>
         </scene>
     </scenes>
     <resources>
@@ -469,6 +470,6 @@
         <image name="recipelistimg.png" width="375" height="667"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3xr-6q-OB9"/>
+        <segue reference="MWE-Rf-awo"/>
     </inferredMetricsTieBreakers>
 </document>
