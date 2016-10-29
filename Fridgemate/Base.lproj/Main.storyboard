@@ -23,7 +23,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvD-u2-aGz">
                                 <state key="normal" backgroundImage="FridgemateStartUpScreeenBG"/>
                                 <connections>
-                                    <segue destination="bFq-eJ-6gQ" kind="show" id="FDc-Cb-FKh"/>
+                                    <segue destination="h1R-co-BhC" kind="show" id="jcM-8o-hj9"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TAP TO CONTINUE!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGY-ZT-FTy">
@@ -50,55 +50,6 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-        </scene>
-        <!--Main Menu-->
-        <scene sceneID="fdG-tA-hXG">
-            <objects>
-                <viewController id="9ln-P7-84n" userLabel="Main Menu" customClass="MainMenu" customModule="Fridgemate" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="FC0-7I-1sk"/>
-                        <viewControllerLayoutGuide type="bottom" id="jY5-Zu-dfX"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="OD8-Ri-l0Z">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainMenuF" translatesAutoresizingMaskIntoConstraints="NO" id="eAk-K8-wEj"/>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rdh-bZ-hgs" userLabel="My Pantry Button">
-                                <frame key="frameInset" minX="22" minY="187" width="337" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="kye-zV-ggT" kind="show" id="CeP-vx-WCB"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VfS-Uy-X9d" userLabel="Recipe List Button">
-                                <frame key="frameInset" minX="19" minY="332" width="337" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="fWY-5s-Be8" kind="show" id="IJb-zi-Hqy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2C-rm-8pq" userLabel="Grocery List Button">
-                                <frame key="frameInset" minX="22" minY="484" width="337" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="DAj-PY-LHz" kind="show" id="YiM-FA-X6T"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="eAk-K8-wEj" firstAttribute="top" secondItem="OD8-Ri-l0Z" secondAttribute="top" id="dQC-zW-Qi6"/>
-                            <constraint firstAttribute="trailing" secondItem="eAk-K8-wEj" secondAttribute="trailing" id="hnH-C2-bUX"/>
-                            <constraint firstItem="jY5-Zu-dfX" firstAttribute="top" secondItem="eAk-K8-wEj" secondAttribute="bottom" id="nj3-Xr-6Iy"/>
-                            <constraint firstItem="eAk-K8-wEj" firstAttribute="leading" secondItem="OD8-Ri-l0Z" secondAttribute="leading" id="nkU-FG-6wh"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="ZHK-Ay-Eq5"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="R5H-l0-Ysu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2004" y="113.79310344827587"/>
         </scene>
         <!--My Pantry-->
         <scene sceneID="SOF-zk-li8">
@@ -189,7 +140,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2H-wU-iOJ" userLabel="RecipeSearchButton">
                                 <connections>
                                     <action selector="recipeSearchButtonTapped:" destination="kye-zV-ggT" eventType="touchUpInside" id="kSX-vG-Ri6"/>
-                                    <segue destination="fWY-5s-Be8" kind="show" id="NUI-jI-v2Z"/>
+                                    <segue destination="fWY-5s-Be8" kind="show" id="3xr-6q-OB9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDK-5S-lQ3" userLabel="ClearButton">
@@ -233,6 +184,7 @@
                             <constraint firstItem="HLp-Rd-WLH" firstAttribute="trailing" secondItem="a2H-wU-iOJ" secondAttribute="trailing" id="zjS-IB-KNC"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="el3-u2-V7f"/>
                     <connections>
                         <outlet property="ingredientTextField" destination="Nwl-DW-GxK" id="faQ-kB-3yd"/>
                         <outlet property="pantryTable" destination="6Qt-2W-wR0" id="gLi-HX-nh1"/>
@@ -240,7 +192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ka6-Gf-EdW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2792.8000000000002" y="150.67466266866569"/>
+            <point key="canvasLocation" x="4671.1999999999998" y="150.67466266866569"/>
         </scene>
         <!--Grocery List-->
         <scene sceneID="0Yx-cQ-ymX">
@@ -332,10 +284,11 @@
                             <outlet property="delegate" destination="fWY-5s-Be8" id="XAo-UE-8HN"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="LZ4-ox-Tbd"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hg5-7n-Msg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1861.5999999999999" y="836.13193403298362"/>
+            <point key="canvasLocation" x="3740" y="836.13193403298362"/>
         </scene>
         <!--Recipe List View Controller-->
         <scene sceneID="YjT-rJ-mAg">
@@ -451,34 +404,71 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZJV-ak-Nql" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2744.8000000000002" y="884.70764617691157"/>
+            <point key="canvasLocation" x="4623.1999999999998" y="884.70764617691157"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="tzx-AM-F0k">
+        <scene sceneID="LG5-Cc-lmJ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bFq-eJ-6gQ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KRG-s6-hHc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="amh-Xk-BVF"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KoS-nn-ff5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kO3-SW-5sQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="9ln-P7-84n" kind="relationship" relationship="rootViewController" id="jbn-0V-lkL"/>
+                        <segue destination="kye-zV-ggT" kind="relationship" relationship="rootViewController" id="pcU-54-p0g"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DdS-xP-rLp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nXi-R0-B9H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1064.8" y="113.79310344827587"/>
+            <point key="canvasLocation" x="3732" y="150.67466266866569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dIr-B8-Hsm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="zuw-GW-DtN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="more" id="gr6-4M-mbr"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v07-56-BCj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fWY-5s-Be8" kind="relationship" relationship="rootViewController" id="V1Z-eL-MX9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VZ2-Ra-Pgg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2800.8000000000002" y="836.13193403298362"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="26S-zf-0Tt">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="h1R-co-BhC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="aPV-MK-9c3">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="KRG-s6-hHc" kind="relationship" relationship="viewControllers" id="sju-vY-ghy"/>
+                        <segue destination="zuw-GW-DtN" kind="relationship" relationship="viewControllers" id="BDz-Bf-bAc"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QHO-8M-Osi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1861.5999999999999" y="493.40329835082463"/>
         </scene>
     </scenes>
     <resources>
         <image name="FridgemateStartUpScreeenBG" width="375" height="667"/>
         <image name="Pantry.png" width="375" height="667"/>
-        <image name="mainMenuF" width="375" height="667"/>
         <image name="recipelistimg.png" width="375" height="667"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NUI-jI-v2Z"/>
+        <segue reference="3xr-6q-OB9"/>
     </inferredMetricsTieBreakers>
 </document>
