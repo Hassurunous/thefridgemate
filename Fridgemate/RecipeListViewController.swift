@@ -8,19 +8,15 @@
 
 import UIKit
 
-class RecipeListViewController: UIViewController, RecipeManagerDelegate, UITableViewDataSource, UITableViewDelegate {
+class RecipeListTableViewController: UITableViewController, RecipeManagerDelegate {
     // let recipeData = RecipeListManager()
 
     
     
-    @IBOutlet weak var tableView: UITableView!
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        tableView.dataSource = self
-        tableView.delegate = self
         
         tableView.reloadData()
     }
@@ -38,7 +34,7 @@ class RecipeListViewController: UIViewController, RecipeManagerDelegate, UITable
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-             
+          //      self.navigationItem.rightBarButtonItem?.tintColor?
     }
     
     
@@ -56,7 +52,7 @@ class RecipeListViewController: UIViewController, RecipeManagerDelegate, UITable
 
 
     // MARK: - Table view data source
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! RecipeListTableViewCell
         
         let recipe = RecipeListManager.sharedInstance.savedRecipeArray[indexPath.row]
@@ -81,12 +77,12 @@ class RecipeListViewController: UIViewController, RecipeManagerDelegate, UITable
         return cell
     }
 
-    func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return RecipeListManager.sharedInstance.savedRecipeArray.count
 

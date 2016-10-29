@@ -52,6 +52,8 @@ class RecipeListManager {
                     //   print(allRecipeData)
                     let recipeArray: [String] = []
                     
+                    self.savedRecipeArray = []
+                    
                     for recipe in allRecipeData {
                         let title = recipe["title"].string!
                         let image = recipe["image"].string!
