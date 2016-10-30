@@ -93,46 +93,45 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T3v-PK-nXt">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Qt-2W-wR0">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="57" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Qt-2W-wR0">
                                 <color key="backgroundColor" white="1" alpha="0.39718000856164382" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="433" id="Tpl-Bq-1ee"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" editingAccessoryType="checkmark" rowHeight="69" id="c5r-2B-1Uw" customClass="PantryTableViewCell" customModule="Fridgemate" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="69"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" editingAccessoryType="checkmark" rowHeight="57" id="c5r-2B-1Uw" customClass="PantryTableViewCell" customModule="Fridgemate" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="1000" height="57"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c5r-2B-1Uw" id="t0n-Aq-3GZ">
-                                            <frame key="frameInset" width="375" height="68"/>
+                                            <frame key="frameInset" width="1000" height="57"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ezc-Ho-CJT">
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="6EG-G1-Eu6">
+                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iRv-G9-81B">
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ezc-Ho-CJT">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="151" id="zLO-tb-IWN"/>
+                                                        <constraint firstItem="Ezc-Ho-CJT" firstAttribute="leading" secondItem="iRv-G9-81B" secondAttribute="leading" constant="15" id="1ij-XJ-EJh"/>
+                                                        <constraint firstItem="Ezc-Ho-CJT" firstAttribute="centerY" secondItem="iRv-G9-81B" secondAttribute="centerY" id="GUU-nM-Yc1"/>
+                                                        <constraint firstItem="Ezc-Ho-CJT" firstAttribute="top" secondItem="iRv-G9-81B" secondAttribute="topMargin" id="XQB-XW-9po"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Ezc-Ho-CJT" secondAttribute="trailing" constant="172" id="knh-3x-Bn8"/>
+                                                        <constraint firstItem="Ezc-Ho-CJT" firstAttribute="bottom" secondItem="iRv-G9-81B" secondAttribute="bottomMargin" id="sL6-Cg-L7A"/>
                                                     </constraints>
-                                                    <color key="minimumTrackTintColor" red="0.19025640087801671" green="0.6875" blue="0.15958389611677296" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <color key="maximumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <connections>
-                                                        <action selector="sliderValueChanged:" destination="c5r-2B-1Uw" eventType="valueChanged" id="WHK-x1-Lzh"/>
-                                                    </connections>
-                                                </slider>
+                                                </scrollView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="6EG-G1-Eu6" firstAttribute="centerY" secondItem="Ezc-Ho-CJT" secondAttribute="centerY" id="H9t-ZD-cbK"/>
-                                                <constraint firstItem="Ezc-Ho-CJT" firstAttribute="leading" secondItem="t0n-Aq-3GZ" secondAttribute="leadingMargin" id="iZm-qA-K6S"/>
-                                                <constraint firstItem="Ezc-Ho-CJT" firstAttribute="centerY" secondItem="t0n-Aq-3GZ" secondAttribute="centerY" id="mZo-PK-heD"/>
-                                                <constraint firstItem="6EG-G1-Eu6" firstAttribute="trailing" secondItem="t0n-Aq-3GZ" secondAttribute="trailingMargin" id="qX7-AU-luN"/>
+                                                <constraint firstAttribute="trailing" secondItem="iRv-G9-81B" secondAttribute="trailing" constant="141" id="Xm9-w0-hSx"/>
+                                                <constraint firstItem="iRv-G9-81B" firstAttribute="centerY" secondItem="t0n-Aq-3GZ" secondAttribute="centerY" id="fTm-Zl-Xn9"/>
+                                                <constraint firstItem="iRv-G9-81B" firstAttribute="leading" secondItem="t0n-Aq-3GZ" secondAttribute="leadingMargin" id="u0y-qP-v61"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="0.3595087756849315" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="ingredientLabel" destination="Ezc-Ho-CJT" id="uaf-rd-hKB"/>
-                                            <outlet property="slider" destination="6EG-G1-Eu6" id="7Fj-Z8-ee7"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -227,7 +226,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="91"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cyd-KL-AiS" id="TJy-GX-wAi">
-                                    <frame key="frameInset" width="375" height="90"/>
+                                    <frame key="frameInset" width="375" height="91"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CsP-zJ-D47">
@@ -312,7 +311,7 @@
                                         <rect key="frame" x="0.0" y="28" width="1000" height="91"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gxm-os-7xI" id="8dQ-RJ-scR">
-                                            <frame key="frameInset" width="1000" height="90"/>
+                                            <frame key="frameInset" width="1000" height="91"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dNO-KN-j9k">
@@ -365,7 +364,7 @@
                                         <rect key="frame" x="0.0" y="119" width="1000" height="99"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3vE-kX-CqB" id="ZdW-Jf-tMh">
-                                            <frame key="frameInset" width="1000" height="98"/>
+                                            <frame key="frameInset" width="1000" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tKo-ag-rUo">
@@ -412,13 +411,24 @@
         <scene sceneID="Nyu-yR-5GP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AdN-Jt-ShO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="jPC-Gu-WHe"/>
+                    <tabBarItem key="tabBarItem" title="" selectedImage="Restaurant Building Filled" systemItem="recents" id="jPC-Gu-WHe">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.5" green="0.20659722220000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fO6-dY-dQg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                            <color key="value" red="0.5" green="0.20659722222222221" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="kye-zV-ggT" kind="relationship" relationship="rootViewController" id="ABr-JC-mXe"/>
                     </connections>
@@ -431,7 +441,13 @@
         <scene sceneID="Exh-XY-5LO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cjd-Gc-YiI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="recents" id="IAt-5g-bce"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="" systemItem="favorites" id="IAt-5g-bce">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.5" green="0.20659722220000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zIt-ug-ZgY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -455,7 +471,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.5" green="0.20659722220000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                            <color key="value" red="0.5" green="0.20659722220000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="AdN-Jt-ShO" kind="relationship" relationship="viewControllers" id="Z2e-kY-7oU"/>
                         <segue destination="cjd-Gc-YiI" kind="relationship" relationship="viewControllers" id="yMn-hM-dao"/>
@@ -468,6 +494,7 @@
     </scenes>
     <resources>
         <image name="FridgemateStartUpScreeenBG" width="375" height="667"/>
+        <image name="Restaurant Building Filled" width="50" height="50"/>
         <image name="fweffwesq.png" width="375" height="667"/>
         <image name="recipelistimg.png" width="375" height="667"/>
     </resources>

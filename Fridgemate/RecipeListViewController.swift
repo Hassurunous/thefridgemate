@@ -17,6 +17,9 @@ class RecipeListTableViewController: UITableViewController, RecipeManagerDelegat
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationItem.title = "Recipe List"
+        self.navigationController?.navigationBar.barTintColor = UIColor.brown
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
         
         tableView.reloadData()
     }

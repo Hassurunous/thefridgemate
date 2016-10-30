@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Icons8/Restaurant Building Filled.png">
+   </FileRef>
+   <FileRef
+      location = "group:Icons8/Restaurant Menu Filled.png">
+   </FileRef>
+   <FileRef
       location = "group:fweffwesq.png">
    </FileRef>
    <FileRef

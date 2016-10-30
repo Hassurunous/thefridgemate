@@ -10,6 +10,11 @@
 		5943D4495516184589683852 /* Pods_Fridgemate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87FF3A0D8B6CA90DF2CE59CA /* Pods_Fridgemate.framework */; };
 		7DA17D927AAB4C609AAE6D3D /* libPods-FridgemateUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E6318C05A37D39EA3797135 /* libPods-FridgemateUITests.a */; };
 		C9353159037DE2435278A8D4 /* libPods-FridgemateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E54547CBE3EE8F15E019353 /* libPods-FridgemateTests.a */; };
+		DD10713E1DC63DFF005DE943 /* Recipe List icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DD10713B1DC63DFF005DE943 /* Recipe List icon.png */; };
+		DD10713F1DC63DFF005DE943 /* Recipe List icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD10713C1DC63DFF005DE943 /* Recipe List icon@2x.png */; };
+		DD1071401DC63DFF005DE943 /* Recipe List icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD10713D1DC63DFF005DE943 /* Recipe List icon@3x.png */; };
+		DD1071431DC6420D005DE943 /* Icon1x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1071411DC6420D005DE943 /* Icon1x.png */; };
+		DD1071441DC6420D005DE943 /* Icon3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1071421DC6420D005DE943 /* Icon3x.png */; };
 		DD4DAFD41DBB473700D06B9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4DAFD31DBB473700D06B9E /* AppDelegate.swift */; };
 		DD4DAFD61DBB473700D06B9E /* StartUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4DAFD51DBB473700D06B9E /* StartUpViewController.swift */; };
 		DD4DAFD91DBB473700D06B9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD4DAFD71DBB473700D06B9E /* Main.storyboard */; };
@@ -58,6 +63,11 @@
 		97E64D1512B0C01290D42787 /* Pods-FridgemateUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FridgemateUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FridgemateUITests/Pods-FridgemateUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C11795D40FF69228A3328F79 /* Pods-Fridgemate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fridgemate.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fridgemate/Pods-Fridgemate.release.xcconfig"; sourceTree = "<group>"; };
 		D9B74745F13A7A8C5E969AC7 /* Pods-FridgemateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FridgemateUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FridgemateUITests/Pods-FridgemateUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DD10713B1DC63DFF005DE943 /* Recipe List icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Recipe List icon.png"; sourceTree = "<group>"; };
+		DD10713C1DC63DFF005DE943 /* Recipe List icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Recipe List icon@2x.png"; sourceTree = "<group>"; };
+		DD10713D1DC63DFF005DE943 /* Recipe List icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Recipe List icon@3x.png"; sourceTree = "<group>"; };
+		DD1071411DC6420D005DE943 /* Icon1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon1x.png; sourceTree = "<group>"; };
+		DD1071421DC6420D005DE943 /* Icon3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon3x.png; sourceTree = "<group>"; };
 		DD4DAFD01DBB473700D06B9E /* Fridgemate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fridgemate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD4DAFD31DBB473700D06B9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD4DAFD51DBB473700D06B9E /* StartUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUpViewController.swift; sourceTree = "<group>"; };
@@ -153,10 +163,15 @@
 			children = (
 				DD4DAFD31DBB473700D06B9E /* AppDelegate.swift */,
 				DD4DAFD71DBB473700D06B9E /* Main.storyboard */,
+				DD1071411DC6420D005DE943 /* Icon1x.png */,
+				DD1071421DC6420D005DE943 /* Icon3x.png */,
 				DDA85C401DC1F9D70016ADB6 /* RecipeList */,
 				DDFC62DA1DC1B07000E43D87 /* View Controllers */,
 				DDFC62D91DC1B00200E43D87 /* Pantry */,
 				DD4DAFDD1DBB473700D06B9E /* Assets.xcassets */,
+				DD10713B1DC63DFF005DE943 /* Recipe List icon.png */,
+				DD10713C1DC63DFF005DE943 /* Recipe List icon@2x.png */,
+				DD10713D1DC63DFF005DE943 /* Recipe List icon@3x.png */,
 				DD4DAFDF1DBB473800D06B9E /* LaunchScreen.storyboard */,
 				DD4DAFE21DBB473800D06B9E /* Info.plist */,
 				DD4DAFDA1DBB473700D06B9E /* Fridgemate.xcdatamodeld */,
@@ -343,8 +358,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD10713E1DC63DFF005DE943 /* Recipe List icon.png in Resources */,
+				DD1071441DC6420D005DE943 /* Icon3x.png in Resources */,
 				DD4DAFE11DBB473800D06B9E /* LaunchScreen.storyboard in Resources */,
+				DD1071431DC6420D005DE943 /* Icon1x.png in Resources */,
+				DD10713F1DC63DFF005DE943 /* Recipe List icon@2x.png in Resources */,
 				DD4DAFDE1DBB473700D06B9E /* Assets.xcassets in Resources */,
+				DD1071401DC63DFF005DE943 /* Recipe List icon@3x.png in Resources */,
 				DD4DAFD91DBB473700D06B9E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
