@@ -29,7 +29,6 @@
 		DDFC62D61DC17D2000E43D87 /* PantryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFC62D51DC17D2000E43D87 /* PantryManager.swift */; };
 		DDFC62D81DC1AFAA00E43D87 /* RecipeListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFC62D71DC1AFAA00E43D87 /* RecipeListTableViewController.swift */; };
 		DDFC62DC1DC1B36D00E43D87 /* RecipeListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFC62DB1DC1B36D00E43D87 /* RecipeListManager.swift */; };
-		DDFC62E01DC1BCFC00E43D87 /* Pantry.png in Resources */ = {isa = PBXBuildFile; fileRef = DDFC62DF1DC1BCFC00E43D87 /* Pantry.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +83,6 @@
 		DDFC62D51DC17D2000E43D87 /* PantryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PantryManager.swift; sourceTree = "<group>"; };
 		DDFC62D71DC1AFAA00E43D87 /* RecipeListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeListTableViewController.swift; sourceTree = "<group>"; };
 		DDFC62DB1DC1B36D00E43D87 /* RecipeListManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeListManager.swift; sourceTree = "<group>"; };
-		DDFC62DF1DC1BCFC00E43D87 /* Pantry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pantry.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +129,6 @@
 		DD4DAFC71DBB473600D06B9E = {
 			isa = PBXGroup;
 			children = (
-				DDFC62DF1DC1BCFC00E43D87 /* Pantry.png */,
 				DD4DAFD21DBB473700D06B9E /* Fridgemate */,
 				DD4DAFEA1DBB473800D06B9E /* FridgemateTests */,
 				DD4DAFF51DBB473800D06B9E /* FridgemateUITests */,
@@ -349,7 +346,6 @@
 				DD4DAFE11DBB473800D06B9E /* LaunchScreen.storyboard in Resources */,
 				DD4DAFDE1DBB473700D06B9E /* Assets.xcassets in Resources */,
 				DD4DAFD91DBB473700D06B9E /* Main.storyboard in Resources */,
-				DDFC62E01DC1BCFC00E43D87 /* Pantry.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

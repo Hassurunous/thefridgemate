@@ -24,7 +24,7 @@ class RecipeListTableViewController: UITableViewController, RecipeManagerDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.tabBarController?.selectedIndex = 1;
        // RecipeListManager.sharedInstance.RecipeSearch()
          self.navigationController?.isNavigationBarHidden = (false)
         RecipeListManager.sharedInstance.delegate = self

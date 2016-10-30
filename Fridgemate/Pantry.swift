@@ -59,6 +59,7 @@ class Pantry: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = (false)
+        self.tabBarController?.selectedIndex = 0;
         
         // Do any additional setup after loading the view.
     }

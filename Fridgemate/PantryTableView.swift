@@ -14,6 +14,7 @@ class PantryTableView: Pantry, UITableViewDelegate, UITableViewDataSource, Pantr
     
     @IBAction func recipeSearchButtonTapped(_ sender: UIButton) {
         RecipeListManager.sharedInstance.RecipeSearch()
+        self.tabBarController?.selectedIndex = 1;
     }
     override func viewDidLoad() {
         super.viewDidLoad()
