@@ -17,12 +17,13 @@ protocol RecipeManagerDelegate {
 
 class RecipeListManager {
     static let sharedInstance = RecipeListManager()
+    
     var delegate:RecipeManagerDelegate?
     
     
     
     let complexURL = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/searchComplex"
-    var savedRecipeArray = [RecipeResultStruct]()
+    var savedRecipeArray = [RecipeResult]()
     
     
     
@@ -60,7 +61,7 @@ class RecipeListManager {
                         let ingredientsUsed = recipe["usedIngredientCount"].int!
                         let ingredientsMissed = recipe["missedIngredientCount"].int!
                         let id = recipe["id"].int!
-                        self.savedRecipeArray.append(RecipeResultStruct(title: title, id: id, image: image, ingredientsUsed: ingredientsUsed, ingredientsMissing: ingredientsMissed))
+                        self.savedRecipeArray.append(RecipeResult(title: title, id: id, image: image, ingredientsUsed: ingredientsUsed, ingredientsMissing: ingredientsMissed))
                         
                         
                     }

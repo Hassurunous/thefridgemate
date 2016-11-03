@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class RecipeResultStruct {
+class RecipeResult {
     let title:String
     let id:Int
     let image:String

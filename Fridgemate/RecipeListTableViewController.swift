@@ -8,8 +8,8 @@
 
 import UIKit
 
-class RecipeListViewController: UIViewController, RecipeManagerDelegate, UITableViewDataSource, UITableViewDelegate {
-    // let recipeData = RecipeListManager()
+class RecipeListViewController2: UIViewController, RecipeManagerDelegate, UITableViewDataSource, UITableViewDelegate {
+     let recipeData = RecipeListManager()
 
     
     
@@ -44,7 +44,7 @@ class RecipeListViewController: UIViewController, RecipeManagerDelegate, UITable
     
     
     func didLoadRecipes() {
-        print("Did load recipes!!!!!")
+        print("Did load recipes ******")
         tableView.reloadData()
     }
     
@@ -52,6 +52,38 @@ class RecipeListViewController: UIViewController, RecipeManagerDelegate, UITable
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("prepare func called")
+        if segue.identifier == "toDetailsSegue" {
+            print("segue ID confirmed")
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let destVC = segue.destination as! DetailsViewController
+                
+                //         destVC.titleString = movieData.movieArray[indexPath.row].name
+                //           destVC.descriptionString = movieData.movieArray[indexPath.row].description
+                //                let url = URL(string: RecipeListManager.sharedInstance.savedRecipeArray[indexPath.row].image)
+                //                let session = URLSession.shared.dataTask(with: url!) {(data,response, error) in
+                //                    let image = UIImage(data: data!)
+                //                    DispatchQueue.main.async {
+                //                        destVC.recipeImage.image = image
+                //
+                //                    }
+                //
+                //                }
+                //                session.resume()
+                //                destVC.recipeImage.image = RecipeListManager.sharedInstance.savedRecipeArray[indexPath.row].image as! UIImage
+                
+                destVC.recipe = recipeData.savedRecipeArray[indexPath.row]
+                // destVC.detailRecipeTitle.text = RecipeListManager.sharedInstance.savedRecipeArray[indexPath.row].title
+                
+                
+            }
+            // Get the new view controller using segue.destinationViewController.
+            // Pass the selected object to the new view controller.
+        }
+        
+        
     }
 
 
@@ -91,8 +123,11 @@ class RecipeListViewController: UIViewController, RecipeManagerDelegate, UITable
         return RecipeListManager.sharedInstance.savedRecipeArray.count
 
    
+    }
 
-   
+
+    
+
 
     /*
     // Override to support conditional editing of the table view.
@@ -137,7 +172,7 @@ class RecipeListViewController: UIViewController, RecipeManagerDelegate, UITable
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
+         
     */
+}
 
-}
-}

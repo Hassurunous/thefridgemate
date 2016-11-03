@@ -100,10 +100,10 @@
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" editingAccessoryType="checkmark" rowHeight="57" id="c5r-2B-1Uw" customClass="PantryTableViewCell" customModule="Fridgemate" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="1000" height="57"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="57"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c5r-2B-1Uw" id="t0n-Aq-3GZ">
-                                            <frame key="frameInset" width="1000" height="57"/>
+                                            <frame key="frameInset" width="375" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iRv-G9-81B">
@@ -226,7 +226,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="91"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cyd-KL-AiS" id="TJy-GX-wAi">
-                                    <frame key="frameInset" width="375" height="91"/>
+                                    <frame key="frameInset" width="375" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CsP-zJ-D47">
@@ -277,6 +277,7 @@
                                     <outlet property="ingredientsUsedLabel" destination="sAW-gP-mgW" id="Cjf-fr-z1z"/>
                                     <outlet property="recipeImage" destination="CsP-zJ-D47" id="UVf-73-IiC"/>
                                     <outlet property="recipeTitleLabel" destination="47D-aT-BJC" id="fyt-Fh-yOx"/>
+                                    <segue destination="FOm-rg-sQ8" kind="show" identifier="toDetailsSegue" id="Z69-mL-plJ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -290,6 +291,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hg5-7n-Msg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5618.3999999999996" y="836.13193403298362"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="5Tk-KZ-VJe">
+            <objects>
+                <viewController id="FOm-rg-sQ8" customClass="DetailsViewController" customModule="Fridgemate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PsM-a9-H21"/>
+                        <viewControllerLayoutGuide type="bottom" id="9tm-4Y-tGy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XYi-Sn-9rp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2QD-d9-7pI">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hZH-nk-rMI">
+                                <color key="backgroundColor" red="0.060468025505542755" green="0.027932319790124893" blue="0.014160376973450184" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="2QD-d9-7pI" secondAttribute="trailing" constant="57" id="7bv-Ho-3IN"/>
+                            <constraint firstItem="2QD-d9-7pI" firstAttribute="leading" secondItem="XYi-Sn-9rp" secondAttribute="leadingMargin" constant="60" id="86R-kh-Ltl"/>
+                            <constraint firstItem="9tm-4Y-tGy" firstAttribute="top" secondItem="hZH-nk-rMI" secondAttribute="bottom" constant="370" id="CUO-bP-vaQ"/>
+                            <constraint firstItem="hZH-nk-rMI" firstAttribute="leading" secondItem="XYi-Sn-9rp" secondAttribute="leadingMargin" id="RhF-i8-r0M"/>
+                            <constraint firstItem="hZH-nk-rMI" firstAttribute="trailing" secondItem="XYi-Sn-9rp" secondAttribute="trailingMargin" id="Rwb-9F-l2A"/>
+                            <constraint firstItem="2QD-d9-7pI" firstAttribute="top" secondItem="PsM-a9-H21" secondAttribute="bottom" constant="16" id="o6A-AV-SFm"/>
+                            <constraint firstItem="hZH-nk-rMI" firstAttribute="top" secondItem="2QD-d9-7pI" secondAttribute="bottom" constant="19" id="rj6-TT-13Y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailRecipeTitle" destination="2QD-d9-7pI" id="oza-yJ-fGJ"/>
+                        <outlet property="recipeImage" destination="hZH-nk-rMI" id="Bjy-hP-BV4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5kA-m0-DNF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6397.6000000000004" y="834.33283358320841"/>
         </scene>
         <!--Recipe List View Controller-->
         <scene sceneID="YjT-rJ-mAg">
@@ -308,10 +350,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="91" id="gxm-os-7xI" customClass="RecipeListTableViewCell" customModule="Fridgemate" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="1000" height="91"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="91"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gxm-os-7xI" id="8dQ-RJ-scR">
-                                            <frame key="frameInset" width="1000" height="91"/>
+                                            <frame key="frameInset" width="375" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dNO-KN-j9k">
@@ -361,10 +403,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="99" id="3vE-kX-CqB" customClass="PantryTableViewCell" customModule="Fridgemate" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="119" width="1000" height="99"/>
+                                        <rect key="frame" x="0.0" y="119" width="375" height="99"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3vE-kX-CqB" id="ZdW-Jf-tMh">
-                                            <frame key="frameInset" width="1000" height="99"/>
+                                            <frame key="frameInset" width="375" height="98"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tKo-ag-rUo">
@@ -407,11 +449,11 @@
             </objects>
             <point key="canvasLocation" x="1636" y="1227"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Pantry-->
         <scene sceneID="Nyu-yR-5GP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AdN-Jt-ShO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" selectedImage="Restaurant Building Filled" systemItem="recents" id="jPC-Gu-WHe">
+                    <tabBarItem key="tabBarItem" title="Pantry" image="PantryIcon" selectedImage="PantryIcon.png" id="jPC-Gu-WHe">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" red="0.5" green="0.20659722220000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -424,11 +466,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                            <color key="value" red="0.5" green="0.20659722222222221" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="kye-zV-ggT" kind="relationship" relationship="rootViewController" id="ABr-JC-mXe"/>
                     </connections>
@@ -437,11 +474,11 @@
             </objects>
             <point key="canvasLocation" x="5610.3999999999996" y="150.67466266866569"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Recipe List-->
         <scene sceneID="Exh-XY-5LO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cjd-Gc-YiI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="1" title="" systemItem="favorites" id="IAt-5g-bce">
+                    <tabBarItem key="tabBarItem" tag="1" title="Recipe List" image="recipeListIcon75.png" selectedImage="recipeListIcon75" id="IAt-5g-bce">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" red="0.5" green="0.20659722220000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -477,11 +514,6 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBar>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                            <color key="value" red="0.5" green="0.20659722220000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="AdN-Jt-ShO" kind="relationship" relationship="viewControllers" id="Z2e-kY-7oU"/>
                         <segue destination="cjd-Gc-YiI" kind="relationship" relationship="viewControllers" id="yMn-hM-dao"/>
@@ -494,8 +526,11 @@
     </scenes>
     <resources>
         <image name="FridgemateStartUpScreeenBG" width="375" height="667"/>
-        <image name="Restaurant Building Filled" width="50" height="50"/>
+        <image name="PantryIcon" width="25" height="25"/>
+        <image name="PantryIcon.png" width="25" height="25"/>
         <image name="fweffwesq.png" width="375" height="667"/>
+        <image name="recipeListIcon75" width="23" height="19"/>
+        <image name="recipeListIcon75.png" width="23" height="19"/>
         <image name="recipelistimg.png" width="375" height="667"/>
     </resources>
 </document>

@@ -9,7 +9,7 @@
 import UIKit
 
 class RecipeListTableViewController: UITableViewController, RecipeManagerDelegate {
-    // let recipeData = RecipeListManager()
+     let recipeData = RecipeListManager()
 
     
     
@@ -88,6 +88,7 @@ class RecipeListTableViewController: UITableViewController, RecipeManagerDelegat
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return RecipeListManager.sharedInstance.savedRecipeArray.count
+    }
 
    
 
@@ -128,15 +129,31 @@ class RecipeListTableViewController: UITableViewController, RecipeManagerDelegat
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            print("prepare func called")
+            if segue.identifier == "toDetailsSegue" {
+                print("segue ID confirmed")
+                if let indexPath = tableView.indexPathForSelectedRow {
+                    let destVC = segue.destination as! DetailsViewController
+                    
+                    print(RecipeListManager.sharedInstance.savedRecipeArray)
+                    
+                    destVC.recipe = RecipeListManager.sharedInstance.savedRecipeArray[indexPath.row]
+                    // destVC.detailRecipeTitle.text = RecipeListManager.sharedInstance.savedRecipeArray[indexPath.row].title
+                    
+                    
+                }
+                // Get the new view controller using segue.destinationViewController.
+                // Pass the selected object to the new view controller.
+            }
+            
+            
+        }
+    
 
 }
-}
+
