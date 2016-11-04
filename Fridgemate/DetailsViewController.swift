@@ -9,6 +9,7 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
+    static let sharedInstance = DetailsViewController()
 
     // MARK: - IBOutlets
 
@@ -26,12 +27,14 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+self.navigationController?.navigationBar.tintColor = UIColor.white
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+       self.navigationController?.navigationBar.tintColor = UIColor.white
         print("Details will appear!!!!!!")
         
         if let recipe = recipe {
@@ -68,5 +71,20 @@ class DetailsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "getRecipeSegue" {            if let indexPath = tableView.indexPathForSelectedRow {
+                let destVC = segue.destination as! DetailsViewController
+                print(RecipeListManager.sharedInstance.savedRecipeArray)
+                destVC.recipe = RecipeListManager.sharedInstance.savedRecipeArray[indexPath.row]
+                // destVC.detailRecipeTitle.text = RecipeListManager.sharedInstance.savedRecipeArray[indexPath.row].title
+                
+                
+            }
+            // Get the new view controller using segue.destinationViewController.
+            // Pass the selected object to the new view controller.
+        }
+        
+        
+    }
 
 }

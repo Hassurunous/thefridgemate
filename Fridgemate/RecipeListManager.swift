@@ -35,6 +35,8 @@ class RecipeListManager {
         ]
         let params = [
             "includeIngredients":"\(PantryManager.sharedInstance.pantryArray)",
+           // "addRecipeInformation":"true"
+            "fillIngredients":"true"
             
         ]
         _ =  Alamofire.request(complexURL,parameters: params, headers: headers).validate().responseJSON() { response in
@@ -50,7 +52,7 @@ class RecipeListManager {
                     print("-------------")
                     
                     let allRecipeData = recipeData["results"].array!
-                    //   print(allRecipeData)
+                       print(allRecipeData)
                     let recipeArray: [String] = []
                     
                     self.savedRecipeArray = []
@@ -58,10 +60,12 @@ class RecipeListManager {
                     for recipe in allRecipeData {
                         let title = recipe["title"].string!
                         let image = recipe["image"].string!
+
                         let ingredientsUsed = recipe["usedIngredientCount"].int!
                         let ingredientsMissed = recipe["missedIngredientCount"].int!
                         let id = recipe["id"].int!
-                        self.savedRecipeArray.append(RecipeResult(title: title, id: id, image: image, ingredientsUsed: ingredientsUsed, ingredientsMissing: ingredientsMissed))
+                        
+                        self.savedRecipeArray.append(RecipeResult(title: title, id: id, image: image,  ingredientsUsed: ingredientsUsed, ingredientsMissing: ingredientsMissed))
                         
                         
                     }
@@ -75,10 +79,7 @@ class RecipeListManager {
                     
                     let recipeListString  = recipeArray.joined(separator: ",")
                     UserDefaults.standard.set(recipeListString, forKey:"recipeList")
-                    // UserDefaults.standard.set(self.savedRecipeArray, forKey: "savedRecipeList")
-                    
-                    //                    print(recipeListString)
-                    //                    print("____________________")
+
                     
                     
                 }
