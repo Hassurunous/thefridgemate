@@ -22,7 +22,7 @@ class RecipeListManager {
     
     
     
-    let complexURL = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/searchComplex"
+    let URL = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/searchComplex"
     var savedRecipeArray = [RecipeResult]()
     
     
@@ -36,10 +36,10 @@ class RecipeListManager {
         let params = [
             "includeIngredients":"\(PantryManager.sharedInstance.pantryArray)",
            // "addRecipeInformation":"true"
-            "fillIngredients":"true"
+            //"fillIngredients":"true"
             
         ]
-        _ =  Alamofire.request(complexURL,parameters: params, headers: headers).validate().responseJSON() { response in
+        _ =  Alamofire.request(URL,parameters: params, headers: headers).validate().responseJSON() { response in
             switch response.result {
             case .success:
                 
@@ -47,12 +47,11 @@ class RecipeListManager {
                 if let value = response.result.value {
                     let recipeData = JSON(value)
                     
-                    //print(recipeData)
-                    print("-------------")
-                    print("-------------")
+                  //  print(recipeData)
+
                     
                     let allRecipeData = recipeData["results"].array!
-                       print(allRecipeData)
+                       //print(allRecipeData)
                     let recipeArray: [String] = []
                     
                     self.savedRecipeArray = []

@@ -11,9 +11,6 @@
 		7DA17D927AAB4C609AAE6D3D /* libPods-FridgemateUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E6318C05A37D39EA3797135 /* libPods-FridgemateUITests.a */; };
 		C9353159037DE2435278A8D4 /* libPods-FridgemateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E54547CBE3EE8F15E019353 /* libPods-FridgemateTests.a */; };
 		DD0924661DC76B2E001186DC /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0924651DC76B2D001186DC /* DetailsViewController.swift */; };
-		DD10713E1DC63DFF005DE943 /* Recipe List icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DD10713B1DC63DFF005DE943 /* Recipe List icon.png */; };
-		DD10713F1DC63DFF005DE943 /* Recipe List icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD10713C1DC63DFF005DE943 /* Recipe List icon@2x.png */; };
-		DD1071401DC63DFF005DE943 /* Recipe List icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD10713D1DC63DFF005DE943 /* Recipe List icon@3x.png */; };
 		DD4DAFD41DBB473700D06B9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4DAFD31DBB473700D06B9E /* AppDelegate.swift */; };
 		DD4DAFD61DBB473700D06B9E /* StartUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4DAFD51DBB473700D06B9E /* StartUpViewController.swift */; };
 		DD4DAFD91DBB473700D06B9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD4DAFD71DBB473700D06B9E /* Main.storyboard */; };
@@ -22,6 +19,9 @@
 		DD4DAFE11DBB473800D06B9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD4DAFDF1DBB473800D06B9E /* LaunchScreen.storyboard */; };
 		DD4DAFEC1DBB473800D06B9E /* FridgemateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4DAFEB1DBB473800D06B9E /* FridgemateTests.swift */; };
 		DD4DAFF71DBB473800D06B9E /* FridgemateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4DAFF61DBB473800D06B9E /* FridgemateUITests.swift */; };
+		DD7A96C01DCEB32C00D99444 /* RecipeStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7A96BF1DCEB32C00D99444 /* RecipeStep.swift */; };
+		DD7A96C21DCEB4C700D99444 /* RecipeStepTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7A96C11DCEB4C700D99444 /* RecipeStepTableViewController.swift */; };
+		DD7A96C41DCEB58200D99444 /* RecipeStepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7A96C31DCEB58200D99444 /* RecipeStepTableViewCell.swift */; };
 		DD85A4031DBFE6DE00E0D6AE /* Pantry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD85A4021DBFE6DE00E0D6AE /* Pantry.swift */; };
 		DD85A4051DBFE72800E0D6AE /* GroceryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD85A4041DBFE72800E0D6AE /* GroceryList.swift */; };
 		DD85A4091DBFE98600E0D6AE /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD85A4081DBFE98600E0D6AE /* MainMenu.swift */; };
@@ -63,9 +63,6 @@
 		C11795D40FF69228A3328F79 /* Pods-Fridgemate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fridgemate.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fridgemate/Pods-Fridgemate.release.xcconfig"; sourceTree = "<group>"; };
 		D9B74745F13A7A8C5E969AC7 /* Pods-FridgemateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FridgemateUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FridgemateUITests/Pods-FridgemateUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DD0924651DC76B2D001186DC /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		DD10713B1DC63DFF005DE943 /* Recipe List icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Recipe List icon.png"; sourceTree = "<group>"; };
-		DD10713C1DC63DFF005DE943 /* Recipe List icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Recipe List icon@2x.png"; sourceTree = "<group>"; };
-		DD10713D1DC63DFF005DE943 /* Recipe List icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Recipe List icon@3x.png"; sourceTree = "<group>"; };
 		DD4DAFD01DBB473700D06B9E /* Fridgemate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fridgemate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD4DAFD31DBB473700D06B9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD4DAFD51DBB473700D06B9E /* StartUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUpViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +77,9 @@
 		DD4DAFF21DBB473800D06B9E /* FridgemateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FridgemateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD4DAFF61DBB473800D06B9E /* FridgemateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgemateUITests.swift; sourceTree = "<group>"; };
 		DD4DAFF81DBB473800D06B9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD7A96BF1DCEB32C00D99444 /* RecipeStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecipeStep.swift; path = Recipeicon/RecipeStep.swift; sourceTree = "<group>"; };
+		DD7A96C11DCEB4C700D99444 /* RecipeStepTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeStepTableViewController.swift; sourceTree = "<group>"; };
+		DD7A96C31DCEB58200D99444 /* RecipeStepTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeStepTableViewCell.swift; sourceTree = "<group>"; };
 		DD85A4021DBFE6DE00E0D6AE /* Pantry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pantry.swift; sourceTree = "<group>"; };
 		DD85A4041DBFE72800E0D6AE /* GroceryList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryList.swift; sourceTree = "<group>"; };
 		DD85A4081DBFE98600E0D6AE /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
@@ -168,15 +168,13 @@
 			children = (
 				DD4DAFD31DBB473700D06B9E /* AppDelegate.swift */,
 				DD4DAFD71DBB473700D06B9E /* Main.storyboard */,
-				DD0BC9A91DC7D65E0024839B /* Recipeicon */,
-				DD0924651DC76B2D001186DC /* DetailsViewController.swift */,
-				DDA85C401DC1F9D70016ADB6 /* RecipeList */,
 				DDFC62DA1DC1B07000E43D87 /* View Controllers */,
 				DDFC62D91DC1B00200E43D87 /* Pantry */,
+				DDA85C401DC1F9D70016ADB6 /* RecipeList */,
+				DD0924651DC76B2D001186DC /* DetailsViewController.swift */,
+				DD7A96C71DCEB5B700D99444 /* RecipeSteps */,
 				DD4DAFDD1DBB473700D06B9E /* Assets.xcassets */,
-				DD10713B1DC63DFF005DE943 /* Recipe List icon.png */,
-				DD10713C1DC63DFF005DE943 /* Recipe List icon@2x.png */,
-				DD10713D1DC63DFF005DE943 /* Recipe List icon@3x.png */,
+				DD0BC9A91DC7D65E0024839B /* Recipeicon */,
 				DD4DAFDF1DBB473800D06B9E /* LaunchScreen.storyboard */,
 				DD4DAFE21DBB473800D06B9E /* Info.plist */,
 				DD4DAFDA1DBB473700D06B9E /* Fridgemate.xcdatamodeld */,
@@ -200,6 +198,16 @@
 				DD4DAFF81DBB473800D06B9E /* Info.plist */,
 			);
 			path = FridgemateUITests;
+			sourceTree = "<group>";
+		};
+		DD7A96C71DCEB5B700D99444 /* RecipeSteps */ = {
+			isa = PBXGroup;
+			children = (
+				DD7A96C11DCEB4C700D99444 /* RecipeStepTableViewController.swift */,
+				DD7A96C31DCEB58200D99444 /* RecipeStepTableViewCell.swift */,
+				DD7A96BF1DCEB32C00D99444 /* RecipeStep.swift */,
+			);
+			name = RecipeSteps;
 			sourceTree = "<group>";
 		};
 		DDA85C401DC1F9D70016ADB6 /* RecipeList */ = {
@@ -363,11 +371,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD10713E1DC63DFF005DE943 /* Recipe List icon.png in Resources */,
 				DD4DAFE11DBB473800D06B9E /* LaunchScreen.storyboard in Resources */,
-				DD10713F1DC63DFF005DE943 /* Recipe List icon@2x.png in Resources */,
 				DD4DAFDE1DBB473700D06B9E /* Assets.xcassets in Resources */,
-				DD1071401DC63DFF005DE943 /* Recipe List icon@3x.png in Resources */,
 				DD4DAFD91DBB473700D06B9E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,14 +528,17 @@
 				DDF364F21DC2987400A4A2C8 /* RecipeListTableViewCell.swift in Sources */,
 				DD85A4091DBFE98600E0D6AE /* MainMenu.swift in Sources */,
 				DDFC62DC1DC1B36D00E43D87 /* RecipeListManager.swift in Sources */,
+				DD7A96C41DCEB58200D99444 /* RecipeStepTableViewCell.swift in Sources */,
 				DD85A4031DBFE6DE00E0D6AE /* Pantry.swift in Sources */,
 				DD85A4051DBFE72800E0D6AE /* GroceryList.swift in Sources */,
 				DD85A40F1DC02C3700E0D6AE /* PantryTableViewCell.swift in Sources */,
 				DDFC62D81DC1AFAA00E43D87 /* RecipeListTableViewController.swift in Sources */,
 				DD4DAFD61DBB473700D06B9E /* StartUpViewController.swift in Sources */,
 				DDFC3C651DC41A5A0007C779 /* RecipeListTableViewController2.swift in Sources */,
+				DD7A96C21DCEB4C700D99444 /* RecipeStepTableViewController.swift in Sources */,
 				DD4DAFD41DBB473700D06B9E /* AppDelegate.swift in Sources */,
 				DD0924661DC76B2E001186DC /* DetailsViewController.swift in Sources */,
+				DD7A96C01DCEB32C00D99444 /* RecipeStep.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
