@@ -31,7 +31,6 @@
 		DDF364F21DC2987400A4A2C8 /* RecipeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF364F11DC2987400A4A2C8 /* RecipeListTableViewCell.swift */; };
 		DDFC3C651DC41A5A0007C779 /* RecipeListTableViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFC3C641DC41A5A0007C779 /* RecipeListTableViewController2.swift */; };
 		DDFC62D61DC17D2000E43D87 /* PantryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFC62D51DC17D2000E43D87 /* PantryManager.swift */; };
-		DDFC62D81DC1AFAA00E43D87 /* RecipeListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFC62D71DC1AFAA00E43D87 /* RecipeListTableViewController.swift */; };
 		DDFC62DC1DC1B36D00E43D87 /* RecipeListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFC62DB1DC1B36D00E43D87 /* RecipeListManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -89,7 +88,6 @@
 		DDF364F11DC2987400A4A2C8 /* RecipeListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeListTableViewCell.swift; sourceTree = "<group>"; };
 		DDFC3C641DC41A5A0007C779 /* RecipeListTableViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeListTableViewController2.swift; sourceTree = "<group>"; };
 		DDFC62D51DC17D2000E43D87 /* PantryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PantryManager.swift; sourceTree = "<group>"; };
-		DDFC62D71DC1AFAA00E43D87 /* RecipeListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeListTableViewController.swift; sourceTree = "<group>"; };
 		DDFC62DB1DC1B36D00E43D87 /* RecipeListManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeListManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -216,7 +214,6 @@
 				DDBF7A041DC299BC002DEEF3 /* RecipeListCellStruct.swift */,
 				DDF364F11DC2987400A4A2C8 /* RecipeListTableViewCell.swift */,
 				DDFC62DB1DC1B36D00E43D87 /* RecipeListManager.swift */,
-				DDFC62D71DC1AFAA00E43D87 /* RecipeListTableViewController.swift */,
 				DDFC3C641DC41A5A0007C779 /* RecipeListTableViewController2.swift */,
 			);
 			name = RecipeList;
@@ -532,7 +529,6 @@
 				DD85A4031DBFE6DE00E0D6AE /* Pantry.swift in Sources */,
 				DD85A4051DBFE72800E0D6AE /* GroceryList.swift in Sources */,
 				DD85A40F1DC02C3700E0D6AE /* PantryTableViewCell.swift in Sources */,
-				DDFC62D81DC1AFAA00E43D87 /* RecipeListTableViewController.swift in Sources */,
 				DD4DAFD61DBB473700D06B9E /* StartUpViewController.swift in Sources */,
 				DDFC3C651DC41A5A0007C779 /* RecipeListTableViewController2.swift in Sources */,
 				DD7A96C21DCEB4C700D99444 /* RecipeStepTableViewController.swift in Sources */,
