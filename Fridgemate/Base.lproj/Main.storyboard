@@ -341,7 +341,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="getRecipe:" destination="FOm-rg-sQ8" eventType="touchUpInside" id="8Hv-cd-qN5"/>
-                                    <segue destination="i3M-Q4-W5V" kind="show" id="J0X-76-Oug"/>
+                                    <segue destination="i3M-Q4-W5V" kind="show" identifier="getRecipeSegue" id="J0X-76-Oug"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GGR-W3-HLg">
@@ -397,7 +397,7 @@
                                         </label>
                                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rLL-B3-xbr">
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="23" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPC-DV-gy8">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="23" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPC-DV-gy8">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="160" id="7jO-hr-EsA"/>
                                                     </constraints>

@@ -147,7 +147,9 @@ class DetailsViewController: UIViewController {
      }
      */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "getRecipeSegue" {    print() /*       if let indexPath = tableView.indexPathForSelectedRow {
+        if segue.identifier == "getRecipeSegue" {    print()
+             let destVC = segue.destination as! RecipeStepTableViewController
+            /*       if let indexPath = tableView.indexPathForSelectedRow {
             let destVC = segue.destination as! DetailsViewController
             print(RecipeListManager.sharedInstance.savedRecipeArray)
             destVC.recipe = RecipeListManager.sharedInstance.savedRecipeArray[indexPath.row]
