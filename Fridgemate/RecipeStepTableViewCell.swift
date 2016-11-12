@@ -12,11 +12,15 @@ class RecipeStepTableViewCell: UITableViewCell {
     
     
     @IBOutlet weak var stepCountLabel: UILabel!
+
+    @IBOutlet weak var stepDescriptionLabel: UITextView!
     
 
-    @IBOutlet weak var stepDescriptionLabel: UILabel!
+
+
     override func awakeFromNib() {
         super.awakeFromNib()
+        stepDescriptionLabel.scrollRangeToVisible((NSRange(location:0, length:0)))
         // Initialization code
     }
 

@@ -70,7 +70,7 @@ class RecipeListManager {
                     }
                     
                    
-                    print(self.delegate)
+
                     
                     if let delegate = self.delegate {
                         delegate.didLoadRecipes()

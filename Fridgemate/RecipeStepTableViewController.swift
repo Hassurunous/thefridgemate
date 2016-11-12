@@ -7,89 +7,115 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class RecipeStepTableViewController: UITableViewController {
-
+    
+    
+    var recipeSteps = [RecipeInstruction]()
+    var id:Int = 0
+    var recipeStepArray = [RecipeInstruction]()
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        request()
+        
+        navigationItem.title = "Recipe Steps"
+        self.navigationController?.navigationBar.barTintColor = UIColor.brown
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+        
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func loadRecipes() {
+        tableView.reloadData()
     }
-
+    func request() {
+        
+        let aURL:String = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/\(self.id)/analyzedInstructions"
+        
+        let headers:[String:String] = [
+            "X-Mashape-Key":"Hppop5c3XNmsh6WS0tTXm2LrwB77p10grKmjsnWI5GNJIgOtvx"
+        ]
+        let params:[String:String] = [
+            "stepBreakDown":"true"
+            // "includeIngredients":"\(PantryManager.sharedInstance.pantryArray)",
+            // "addRecipeInformation":"true"
+            //   "fillIngredients":"true"
+            
+        ]
+        
+        
+        _ =  Alamofire.request(aURL,parameters: params,  headers: headers).validate().responseJSON() { response in
+            switch response.result {
+            case .success:
+                
+                
+                if let value = response.result.value {
+                    let recipeStepData = JSON(value)
+                    
+                    if  let allRecipeData = recipeStepData[0]["steps"].array {
+                        for step in allRecipeData {
+                            let number = step["number"].int!
+                            let step = step["step"].string!
+                            self.recipeStepArray.append(RecipeInstruction(stepNumber: number, stepDescription: step))
+                            
+                        }
+                        self.tableView.reloadData()
+                    }
+                    else {
+                        print("this recipe doesnt have any steps")
+                        self.recipeStepArray.append(RecipeInstruction(stepNumber: 0, stepDescription: "Sorry! This recipe is not available 😩"))
+                        self.tableView.reloadData()
+                    }
+    
+                }
+                
+            case .failure(let error):
+                print()
+                //
+                print()
+                print()
+                print("--------------------------")
+                print(error)
+                print("2")
+            }
+        }
+    }
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        //  print(DetailsViewController.sharedInstance.recipeStepArray.count)
+        // print("______-----_____")
+        return recipeStepArray.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! RecipeStepTableViewCell
+        let recipe = recipeStepArray[indexPath.row]
+        
+        cell.stepCountLabel.text = "\(recipe.stepNumber)"
+        cell.stepDescriptionLabel.text = recipe.stepDescription
+        print("stepNumber\(recipe.stepNumber)")
+        cell.stepDescriptionLabel.scrollRangeToVisible((NSRange(location:0, length:0)))
+        
+        // Configure the cell...
+        
+        return cell
     }
 
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
- 
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

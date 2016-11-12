@@ -9,7 +9,7 @@
 import UIKit
 
 class RecipeListTableViewController: UITableViewController, RecipeManagerDelegate {
-     let recipeData = RecipeListManager()
+
 
     
     
@@ -31,6 +31,8 @@ class RecipeListTableViewController: UITableViewController, RecipeManagerDelegat
        // RecipeListManager.sharedInstance.RecipeSearch()
          self.navigationController?.isNavigationBarHidden = (false)
         RecipeListManager.sharedInstance.delegate = self
+        print(RecipeListManager.sharedInstance.delegate)
+        print("above is the delegate")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -43,7 +45,7 @@ class RecipeListTableViewController: UITableViewController, RecipeManagerDelegat
     
     
     func didLoadRecipes() {
-        print("Did load recipes!!!!!")
+//        print("Did load recipes!!!!!")
         tableView.reloadData()
     }
     
@@ -87,6 +89,7 @@ class RecipeListTableViewController: UITableViewController, RecipeManagerDelegat
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        
         return RecipeListManager.sharedInstance.savedRecipeArray.count
     }
 
@@ -134,9 +137,8 @@ class RecipeListTableViewController: UITableViewController, RecipeManagerDelegat
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            print("prepare func called")
+
             if segue.identifier == "toDetailsSegue" {
-                print("segue ID confirmed")
                 if let indexPath = tableView.indexPathForSelectedRow {
                     let destVC = segue.destination as! DetailsViewController
                     
