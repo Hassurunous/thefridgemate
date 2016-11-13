@@ -44,10 +44,10 @@ class RecipeStepTableViewController: UITableViewController {
             "X-Mashape-Key":"Hppop5c3XNmsh6WS0tTXm2LrwB77p10grKmjsnWI5GNJIgOtvx"
         ]
         let params:[String:String] = [
-            "stepBreakDown":"true"
+            "stepBreakDown":"true",
             // "includeIngredients":"\(PantryManager.sharedInstance.pantryArray)",
             // "addRecipeInformation":"true"
-            //   "fillIngredients":"true"
+              // "fillIngredients":"true"
             
         ]
         
@@ -109,9 +109,7 @@ class RecipeStepTableViewController: UITableViewController {
         
         cell.stepCountLabel.text = "\(recipe.stepNumber)"
         cell.stepDescriptionLabel.text = recipe.stepDescription
-        print("stepNumber\(recipe.stepNumber)")
-        cell.stepDescriptionLabel.scrollRangeToVisible((NSRange(location:0, length:0)))
-        
+
         // Configure the cell...
         
         return cell

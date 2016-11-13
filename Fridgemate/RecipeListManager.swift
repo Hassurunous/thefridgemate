@@ -36,7 +36,7 @@ class RecipeListManager {
         let params = [
             "includeIngredients":"\(PantryManager.sharedInstance.pantryArray)",
            // "addRecipeInformation":"true"
-            //"fillIngredients":"true"
+            "fillIngredients":"true"
             
         ]
         _ =  Alamofire.request(URL,parameters: params, headers: headers).validate().responseJSON() { response in

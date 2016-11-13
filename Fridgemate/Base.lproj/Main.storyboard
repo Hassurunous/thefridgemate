@@ -50,7 +50,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3175" y="493"/>
+            <point key="canvasLocation" x="2898" y="493"/>
         </scene>
         <!--My Pantry-->
         <scene sceneID="SOF-zk-li8">
@@ -74,7 +74,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6QX-vK-FGb">
                                 <color key="backgroundColor" red="0.53395634889602661" green="0.28733938932418823" blue="0.084002546966075897" alpha="0.80163741438356162" colorSpace="custom" customColorSpace="sRGB"/>
@@ -480,7 +480,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Sx-Hu-shR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3740" y="493.40329835082463"/>
+            <point key="canvasLocation" x="3554" y="493"/>
         </scene>
     </scenes>
     <resources>

@@ -10,21 +10,41 @@
 		5943D4495516184589683852 /* Pods_Fridgemate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87FF3A0D8B6CA90DF2CE59CA /* Pods_Fridgemate.framework */; };
 		7DA17D927AAB4C609AAE6D3D /* libPods-FridgemateUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E6318C05A37D39EA3797135 /* libPods-FridgemateUITests.a */; };
 		C9353159037DE2435278A8D4 /* libPods-FridgemateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E54547CBE3EE8F15E019353 /* libPods-FridgemateTests.a */; };
+		DD0297AD1DD7E328003F8495 /* StartUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0297AC1DD7E328003F8495 /* StartUpViewController.swift */; };
 		DD0924661DC76B2E001186DC /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0924651DC76B2D001186DC /* DetailsViewController.swift */; };
 		DD4DAFD41DBB473700D06B9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4DAFD31DBB473700D06B9E /* AppDelegate.swift */; };
-		DD4DAFD61DBB473700D06B9E /* StartUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4DAFD51DBB473700D06B9E /* StartUpViewController.swift */; };
 		DD4DAFD91DBB473700D06B9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD4DAFD71DBB473700D06B9E /* Main.storyboard */; };
 		DD4DAFDC1DBB473700D06B9E /* Fridgemate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD4DAFDA1DBB473700D06B9E /* Fridgemate.xcdatamodeld */; };
 		DD4DAFDE1DBB473700D06B9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD4DAFDD1DBB473700D06B9E /* Assets.xcassets */; };
 		DD4DAFE11DBB473800D06B9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD4DAFDF1DBB473800D06B9E /* LaunchScreen.storyboard */; };
 		DD4DAFEC1DBB473800D06B9E /* FridgemateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4DAFEB1DBB473800D06B9E /* FridgemateTests.swift */; };
 		DD4DAFF71DBB473800D06B9E /* FridgemateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4DAFF61DBB473800D06B9E /* FridgemateUITests.swift */; };
+		DD51FA231DD7BD4D008B9F24 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = DD51FA0D1DD7BD4C008B9F24 /* Contents.json */; };
+		DD51FA241DD7BD4D008B9F24 /* Icon-App-20x20@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD51FA0E1DD7BD4C008B9F24 /* Icon-App-20x20@1x.png */; };
+		DD51FA251DD7BD4D008B9F24 /* Icon-App-20x20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD51FA0F1DD7BD4C008B9F24 /* Icon-App-20x20@2x.png */; };
+		DD51FA261DD7BD4D008B9F24 /* Icon-App-20x20@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD51FA101DD7BD4C008B9F24 /* Icon-App-20x20@3x.png */; };
+		DD51FA271DD7BD4D008B9F24 /* Icon-App-29x29@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD51FA111DD7BD4C008B9F24 /* Icon-App-29x29@1x.png */; };
+		DD51FA281DD7BD4D008B9F24 /* Icon-App-29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD51FA121DD7BD4C008B9F24 /* Icon-App-29x29@2x.png */; };
+		DD51FA291DD7BD4D008B9F24 /* Icon-App-29x29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD51FA131DD7BD4C008B9F24 /* Icon-App-29x29@3x.png */; };
+		DD51FA2A1DD7BD4D008B9F24 /* Icon-App-40x40@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD51FA141DD7BD4C008B9F24 /* Icon-App-40x40@1x.png */; };
+		DD51FA2B1DD7BD4D008B9F24 /* Icon-App-40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD51FA151DD7BD4C008B9F24 /* Icon-App-40x40@2x.png */; };
+		DD51FA2C1DD7BD4D008B9F24 /* Icon-App-40x40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD51FA161DD7BD4C008B9F24 /* Icon-App-40x40@3x.png */; };
+		DD51FA2D1DD7BD4D008B9F24 /* Icon-App-57x57@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD51FA171DD7BD4C008B9F24 /* Icon-App-57x57@1x.png */; };
+		DD51FA2E1DD7BD4D008B9F24 /* Icon-App-60x60@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD51FA181DD7BD4C008B9F24 /* Icon-App-60x60@1x.png */; };
+		DD51FA2F1DD7BD4D008B9F24 /* Icon-App-60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD51FA191DD7BD4C008B9F24 /* Icon-App-60x60@2x.png */; };
+		DD51FA301DD7BD4D008B9F24 /* Icon-App-60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD51FA1A1DD7BD4C008B9F24 /* Icon-App-60x60@3x.png */; };
+		DD51FA311DD7BD4D008B9F24 /* Icon-App-76x76@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD51FA1B1DD7BD4C008B9F24 /* Icon-App-76x76@1x.png */; };
+		DD51FA321DD7BD4D008B9F24 /* Icon-App-76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD51FA1C1DD7BD4C008B9F24 /* Icon-App-76x76@2x.png */; };
+		DD51FA331DD7BD4D008B9F24 /* Icon-App-76x76@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD51FA1D1DD7BD4D008B9F24 /* Icon-App-76x76@3x.png */; };
+		DD51FA341DD7BD4D008B9F24 /* Icon-App-83.5x83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD51FA1E1DD7BD4D008B9F24 /* Icon-App-83.5x83.5@2x.png */; };
+		DD51FA351DD7BD4D008B9F24 /* iTunesArtwork@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD51FA1F1DD7BD4D008B9F24 /* iTunesArtwork@1x.png */; };
+		DD51FA361DD7BD4D008B9F24 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD51FA201DD7BD4D008B9F24 /* iTunesArtwork@2x.png */; };
+		DD51FA371DD7BD4D008B9F24 /* iTunesArtwork@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD51FA211DD7BD4D008B9F24 /* iTunesArtwork@3x.png */; };
+		DD51FA381DD7BD4D008B9F24 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = DD51FA221DD7BD4D008B9F24 /* README.md */; };
 		DD7A96C01DCEB32C00D99444 /* RecipeStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7A96BF1DCEB32C00D99444 /* RecipeStep.swift */; };
 		DD7A96C21DCEB4C700D99444 /* RecipeStepTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7A96C11DCEB4C700D99444 /* RecipeStepTableViewController.swift */; };
 		DD7A96C41DCEB58200D99444 /* RecipeStepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7A96C31DCEB58200D99444 /* RecipeStepTableViewCell.swift */; };
 		DD85A4031DBFE6DE00E0D6AE /* Pantry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD85A4021DBFE6DE00E0D6AE /* Pantry.swift */; };
-		DD85A4051DBFE72800E0D6AE /* GroceryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD85A4041DBFE72800E0D6AE /* GroceryList.swift */; };
-		DD85A4091DBFE98600E0D6AE /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD85A4081DBFE98600E0D6AE /* MainMenu.swift */; };
 		DD85A40F1DC02C3700E0D6AE /* PantryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD85A40E1DC02C3700E0D6AE /* PantryTableViewCell.swift */; };
 		DDBF7A051DC299BC002DEEF3 /* RecipeListCellStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBF7A041DC299BC002DEEF3 /* RecipeListCellStruct.swift */; };
 		DDD68A151DC06BE20040111D /* PantryTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD68A141DC06BE20040111D /* PantryTableView.swift */; };
@@ -61,10 +81,10 @@
 		97E64D1512B0C01290D42787 /* Pods-FridgemateUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FridgemateUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FridgemateUITests/Pods-FridgemateUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C11795D40FF69228A3328F79 /* Pods-Fridgemate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fridgemate.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fridgemate/Pods-Fridgemate.release.xcconfig"; sourceTree = "<group>"; };
 		D9B74745F13A7A8C5E969AC7 /* Pods-FridgemateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FridgemateUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FridgemateUITests/Pods-FridgemateUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DD0297AC1DD7E328003F8495 /* StartUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartUpViewController.swift; sourceTree = "<group>"; };
 		DD0924651DC76B2D001186DC /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		DD4DAFD01DBB473700D06B9E /* Fridgemate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fridgemate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD4DAFD31DBB473700D06B9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DD4DAFD51DBB473700D06B9E /* StartUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUpViewController.swift; sourceTree = "<group>"; };
 		DD4DAFD81DBB473700D06B9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD4DAFDB1DBB473700D06B9E /* Fridgemate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fridgemate.xcdatamodel; sourceTree = "<group>"; };
 		DD4DAFDD1DBB473700D06B9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,12 +96,32 @@
 		DD4DAFF21DBB473800D06B9E /* FridgemateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FridgemateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD4DAFF61DBB473800D06B9E /* FridgemateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgemateUITests.swift; sourceTree = "<group>"; };
 		DD4DAFF81DBB473800D06B9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD51FA0D1DD7BD4C008B9F24 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		DD51FA0E1DD7BD4C008B9F24 /* Icon-App-20x20@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@1x.png"; sourceTree = "<group>"; };
+		DD51FA0F1DD7BD4C008B9F24 /* Icon-App-20x20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@2x.png"; sourceTree = "<group>"; };
+		DD51FA101DD7BD4C008B9F24 /* Icon-App-20x20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@3x.png"; sourceTree = "<group>"; };
+		DD51FA111DD7BD4C008B9F24 /* Icon-App-29x29@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@1x.png"; sourceTree = "<group>"; };
+		DD51FA121DD7BD4C008B9F24 /* Icon-App-29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@2x.png"; sourceTree = "<group>"; };
+		DD51FA131DD7BD4C008B9F24 /* Icon-App-29x29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@3x.png"; sourceTree = "<group>"; };
+		DD51FA141DD7BD4C008B9F24 /* Icon-App-40x40@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@1x.png"; sourceTree = "<group>"; };
+		DD51FA151DD7BD4C008B9F24 /* Icon-App-40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@2x.png"; sourceTree = "<group>"; };
+		DD51FA161DD7BD4C008B9F24 /* Icon-App-40x40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@3x.png"; sourceTree = "<group>"; };
+		DD51FA171DD7BD4C008B9F24 /* Icon-App-57x57@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-57x57@1x.png"; sourceTree = "<group>"; };
+		DD51FA181DD7BD4C008B9F24 /* Icon-App-60x60@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@1x.png"; sourceTree = "<group>"; };
+		DD51FA191DD7BD4C008B9F24 /* Icon-App-60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@2x.png"; sourceTree = "<group>"; };
+		DD51FA1A1DD7BD4C008B9F24 /* Icon-App-60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@3x.png"; sourceTree = "<group>"; };
+		DD51FA1B1DD7BD4C008B9F24 /* Icon-App-76x76@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@1x.png"; sourceTree = "<group>"; };
+		DD51FA1C1DD7BD4C008B9F24 /* Icon-App-76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@2x.png"; sourceTree = "<group>"; };
+		DD51FA1D1DD7BD4D008B9F24 /* Icon-App-76x76@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@3x.png"; sourceTree = "<group>"; };
+		DD51FA1E1DD7BD4D008B9F24 /* Icon-App-83.5x83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-83.5x83.5@2x.png"; sourceTree = "<group>"; };
+		DD51FA1F1DD7BD4D008B9F24 /* iTunesArtwork@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@1x.png"; sourceTree = "<group>"; };
+		DD51FA201DD7BD4D008B9F24 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		DD51FA211DD7BD4D008B9F24 /* iTunesArtwork@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@3x.png"; sourceTree = "<group>"; };
+		DD51FA221DD7BD4D008B9F24 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DD7A96BF1DCEB32C00D99444 /* RecipeStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecipeStep.swift; path = Recipeicon/RecipeStep.swift; sourceTree = "<group>"; };
 		DD7A96C11DCEB4C700D99444 /* RecipeStepTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeStepTableViewController.swift; sourceTree = "<group>"; };
 		DD7A96C31DCEB58200D99444 /* RecipeStepTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeStepTableViewCell.swift; sourceTree = "<group>"; };
 		DD85A4021DBFE6DE00E0D6AE /* Pantry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pantry.swift; sourceTree = "<group>"; };
-		DD85A4041DBFE72800E0D6AE /* GroceryList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryList.swift; sourceTree = "<group>"; };
-		DD85A4081DBFE98600E0D6AE /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		DD85A40E1DC02C3700E0D6AE /* PantryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PantryTableViewCell.swift; sourceTree = "<group>"; };
 		DDBF7A041DC299BC002DEEF3 /* RecipeListCellStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeListCellStruct.swift; sourceTree = "<group>"; };
 		DDD68A141DC06BE20040111D /* PantryTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PantryTableView.swift; sourceTree = "<group>"; };
@@ -142,6 +182,7 @@
 		DD4DAFC71DBB473600D06B9E = {
 			isa = PBXGroup;
 			children = (
+				DD51FA0B1DD7BD4C008B9F24 /* appiconassets */,
 				DD4DAFD21DBB473700D06B9E /* Fridgemate */,
 				DD4DAFEA1DBB473800D06B9E /* FridgemateTests */,
 				DD4DAFF51DBB473800D06B9E /* FridgemateUITests */,
@@ -166,7 +207,7 @@
 			children = (
 				DD4DAFD31DBB473700D06B9E /* AppDelegate.swift */,
 				DD4DAFD71DBB473700D06B9E /* Main.storyboard */,
-				DDFC62DA1DC1B07000E43D87 /* View Controllers */,
+				DD0297AC1DD7E328003F8495 /* StartUpViewController.swift */,
 				DDFC62D91DC1B00200E43D87 /* Pantry */,
 				DDA85C401DC1F9D70016ADB6 /* RecipeList */,
 				DD0924651DC76B2D001186DC /* DetailsViewController.swift */,
@@ -196,6 +237,44 @@
 				DD4DAFF81DBB473800D06B9E /* Info.plist */,
 			);
 			path = FridgemateUITests;
+			sourceTree = "<group>";
+		};
+		DD51FA0B1DD7BD4C008B9F24 /* appiconassets */ = {
+			isa = PBXGroup;
+			children = (
+				DD51FA0C1DD7BD4C008B9F24 /* AppIcon.appiconset */,
+				DD51FA1F1DD7BD4D008B9F24 /* iTunesArtwork@1x.png */,
+				DD51FA201DD7BD4D008B9F24 /* iTunesArtwork@2x.png */,
+				DD51FA211DD7BD4D008B9F24 /* iTunesArtwork@3x.png */,
+				DD51FA221DD7BD4D008B9F24 /* README.md */,
+			);
+			name = appiconassets;
+			path = ios;
+			sourceTree = "<group>";
+		};
+		DD51FA0C1DD7BD4C008B9F24 /* AppIcon.appiconset */ = {
+			isa = PBXGroup;
+			children = (
+				DD51FA0D1DD7BD4C008B9F24 /* Contents.json */,
+				DD51FA0E1DD7BD4C008B9F24 /* Icon-App-20x20@1x.png */,
+				DD51FA0F1DD7BD4C008B9F24 /* Icon-App-20x20@2x.png */,
+				DD51FA101DD7BD4C008B9F24 /* Icon-App-20x20@3x.png */,
+				DD51FA111DD7BD4C008B9F24 /* Icon-App-29x29@1x.png */,
+				DD51FA121DD7BD4C008B9F24 /* Icon-App-29x29@2x.png */,
+				DD51FA131DD7BD4C008B9F24 /* Icon-App-29x29@3x.png */,
+				DD51FA141DD7BD4C008B9F24 /* Icon-App-40x40@1x.png */,
+				DD51FA151DD7BD4C008B9F24 /* Icon-App-40x40@2x.png */,
+				DD51FA161DD7BD4C008B9F24 /* Icon-App-40x40@3x.png */,
+				DD51FA171DD7BD4C008B9F24 /* Icon-App-57x57@1x.png */,
+				DD51FA181DD7BD4C008B9F24 /* Icon-App-60x60@1x.png */,
+				DD51FA191DD7BD4C008B9F24 /* Icon-App-60x60@2x.png */,
+				DD51FA1A1DD7BD4C008B9F24 /* Icon-App-60x60@3x.png */,
+				DD51FA1B1DD7BD4C008B9F24 /* Icon-App-76x76@1x.png */,
+				DD51FA1C1DD7BD4C008B9F24 /* Icon-App-76x76@2x.png */,
+				DD51FA1D1DD7BD4D008B9F24 /* Icon-App-76x76@3x.png */,
+				DD51FA1E1DD7BD4D008B9F24 /* Icon-App-83.5x83.5@2x.png */,
+			);
+			path = AppIcon.appiconset;
 			sourceTree = "<group>";
 		};
 		DD7A96C71DCEB5B700D99444 /* RecipeSteps */ = {
@@ -228,16 +307,6 @@
 				DD85A40E1DC02C3700E0D6AE /* PantryTableViewCell.swift */,
 			);
 			name = Pantry;
-			sourceTree = "<group>";
-		};
-		DDFC62DA1DC1B07000E43D87 /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				DD4DAFD51DBB473700D06B9E /* StartUpViewController.swift */,
-				DD85A4081DBFE98600E0D6AE /* MainMenu.swift */,
-				DD85A4041DBFE72800E0D6AE /* GroceryList.swift */,
-			);
-			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 		FD02DAA390CB97275E63E3D3 /* Frameworks */ = {
@@ -368,9 +437,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD51FA2B1DD7BD4D008B9F24 /* Icon-App-40x40@2x.png in Resources */,
+				DD51FA311DD7BD4D008B9F24 /* Icon-App-76x76@1x.png in Resources */,
+				DD51FA241DD7BD4D008B9F24 /* Icon-App-20x20@1x.png in Resources */,
 				DD4DAFE11DBB473800D06B9E /* LaunchScreen.storyboard in Resources */,
+				DD51FA261DD7BD4D008B9F24 /* Icon-App-20x20@3x.png in Resources */,
 				DD4DAFDE1DBB473700D06B9E /* Assets.xcassets in Resources */,
+				DD51FA2C1DD7BD4D008B9F24 /* Icon-App-40x40@3x.png in Resources */,
+				DD51FA2F1DD7BD4D008B9F24 /* Icon-App-60x60@2x.png in Resources */,
+				DD51FA271DD7BD4D008B9F24 /* Icon-App-29x29@1x.png in Resources */,
+				DD51FA2E1DD7BD4D008B9F24 /* Icon-App-60x60@1x.png in Resources */,
+				DD51FA301DD7BD4D008B9F24 /* Icon-App-60x60@3x.png in Resources */,
+				DD51FA251DD7BD4D008B9F24 /* Icon-App-20x20@2x.png in Resources */,
+				DD51FA281DD7BD4D008B9F24 /* Icon-App-29x29@2x.png in Resources */,
+				DD51FA331DD7BD4D008B9F24 /* Icon-App-76x76@3x.png in Resources */,
+				DD51FA351DD7BD4D008B9F24 /* iTunesArtwork@1x.png in Resources */,
+				DD51FA2A1DD7BD4D008B9F24 /* Icon-App-40x40@1x.png in Resources */,
+				DD51FA321DD7BD4D008B9F24 /* Icon-App-76x76@2x.png in Resources */,
+				DD51FA2D1DD7BD4D008B9F24 /* Icon-App-57x57@1x.png in Resources */,
 				DD4DAFD91DBB473700D06B9E /* Main.storyboard in Resources */,
+				DD51FA371DD7BD4D008B9F24 /* iTunesArtwork@3x.png in Resources */,
+				DD51FA231DD7BD4D008B9F24 /* Contents.json in Resources */,
+				DD51FA361DD7BD4D008B9F24 /* iTunesArtwork@2x.png in Resources */,
+				DD51FA341DD7BD4D008B9F24 /* Icon-App-83.5x83.5@2x.png in Resources */,
+				DD51FA291DD7BD4D008B9F24 /* Icon-App-29x29@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,13 +613,12 @@
 				DD4DAFDC1DBB473700D06B9E /* Fridgemate.xcdatamodeld in Sources */,
 				DDFC62D61DC17D2000E43D87 /* PantryManager.swift in Sources */,
 				DDF364F21DC2987400A4A2C8 /* RecipeListTableViewCell.swift in Sources */,
-				DD85A4091DBFE98600E0D6AE /* MainMenu.swift in Sources */,
+				DD51FA381DD7BD4D008B9F24 /* README.md in Sources */,
 				DDFC62DC1DC1B36D00E43D87 /* RecipeListManager.swift in Sources */,
 				DD7A96C41DCEB58200D99444 /* RecipeStepTableViewCell.swift in Sources */,
+				DD0297AD1DD7E328003F8495 /* StartUpViewController.swift in Sources */,
 				DD85A4031DBFE6DE00E0D6AE /* Pantry.swift in Sources */,
-				DD85A4051DBFE72800E0D6AE /* GroceryList.swift in Sources */,
 				DD85A40F1DC02C3700E0D6AE /* PantryTableViewCell.swift in Sources */,
-				DD4DAFD61DBB473700D06B9E /* StartUpViewController.swift in Sources */,
 				DDFC3C651DC41A5A0007C779 /* RecipeListTableViewController2.swift in Sources */,
 				DD7A96C21DCEB4C700D99444 /* RecipeStepTableViewController.swift in Sources */,
 				DD4DAFD41DBB473700D06B9E /* AppDelegate.swift in Sources */,

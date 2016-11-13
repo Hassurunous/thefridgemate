@@ -20,7 +20,6 @@ class RecipeStepTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        stepDescriptionLabel.scrollRangeToVisible((NSRange(location:0, length:0)))
         // Initialization code
     }
 

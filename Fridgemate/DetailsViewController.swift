@@ -44,7 +44,10 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.tintColor = UIColor.white
+        navigationItem.title = "Recipe View"
+        self.navigationController?.navigationBar.barTintColor = UIColor.brown
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+
         
         // Do any additional setup after loading the view.
         
