@@ -35,7 +35,7 @@ class RecipeListManager {
         ]
         let params = [
             "includeIngredients":"\(PantryManager.sharedInstance.pantryArray)",
-           // "addRecipeInformation":"true"
+           // "addRecipeInformation":"true",
             "fillIngredients":"true"
             
         ]
@@ -47,7 +47,7 @@ class RecipeListManager {
                 if let value = response.result.value {
                     let recipeData = JSON(value)
                     
-                  //  print(recipeData)
+                print(recipeData)
 
                     
                     let allRecipeData = recipeData["results"].array!

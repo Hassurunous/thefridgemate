@@ -370,7 +370,7 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWT-yJ-Ces">
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="51" id="OEP-2E-NRw"/>
+                                                <constraint firstAttribute="width" constant="63" id="OEP-2E-NRw"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="54"/>
                                             <nil key="textColor"/>
@@ -386,9 +386,9 @@
                                         <constraint firstItem="IWT-yJ-Ces" firstAttribute="leading" secondItem="p2o-JA-VD5" secondAttribute="leading" id="1Vh-RM-Umd"/>
                                         <constraint firstItem="RNh-xK-iIz" firstAttribute="bottom" secondItem="IWT-yJ-Ces" secondAttribute="bottom" id="8PF-VC-1Eb"/>
                                         <constraint firstItem="RNh-xK-iIz" firstAttribute="centerY" secondItem="p2o-JA-VD5" secondAttribute="centerY" id="GSJ-GE-2aJ"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="IWT-yJ-Ces" secondAttribute="bottom" constant="-4" id="gAl-PA-alH"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="IWT-yJ-Ces" secondAttribute="bottom" constant="-5" id="gAl-PA-alH"/>
                                         <constraint firstItem="RNh-xK-iIz" firstAttribute="trailing" secondItem="p2o-JA-VD5" secondAttribute="trailingMargin" id="iW9-FI-3ce"/>
-                                        <constraint firstItem="RNh-xK-iIz" firstAttribute="leading" secondItem="IWT-yJ-Ces" secondAttribute="trailing" constant="3" id="tVR-B2-bSd"/>
+                                        <constraint firstItem="RNh-xK-iIz" firstAttribute="leading" secondItem="IWT-yJ-Ces" secondAttribute="trailing" constant="2" id="tVR-B2-bSd"/>
                                         <constraint firstItem="IWT-yJ-Ces" firstAttribute="top" secondItem="p2o-JA-VD5" secondAttribute="top" id="xaS-fX-Lek"/>
                                     </constraints>
                                 </tableViewCellContentView>
