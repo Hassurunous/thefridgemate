@@ -35,7 +35,7 @@ class RecipeListManager {
         ]
         let params = [
             "includeIngredients":"\(PantryManager.sharedInstance.pantryArray)",
-           // "addRecipeInformation":"true",
+            "addRecipeInformation":"true",
             "fillIngredients":"true"
             
         ]
@@ -47,24 +47,51 @@ class RecipeListManager {
                 if let value = response.result.value {
                     let recipeData = JSON(value)
                     
-                print(recipeData)
+               // print(recipeData)
 
                     
                     let allRecipeData = recipeData["results"].array!
-                       //print(allRecipeData)
+                       print(allRecipeData)
+                   
                     let recipeArray: [String] = []
                     
                     self.savedRecipeArray = []
                     
                     for recipe in allRecipeData {
+                        let readyInMinutes = recipe["readyInMinutes"].int!
                         let title = recipe["title"].string!
                         let image = recipe["image"].string!
 
                         let ingredientsUsed = recipe["usedIngredientCount"].int!
                         let ingredientsMissed = recipe["missedIngredientCount"].int!
                         let id = recipe["id"].int!
+                        let servingNumber = recipe["servings"].int!
                         
-                        self.savedRecipeArray.append(RecipeResult(title: title, id: id, image: image,  ingredientsUsed: ingredientsUsed, ingredientsMissing: ingredientsMissed))
+                        
+                        let missedIngredientJSONArray = recipe["missedIngredients"].array!
+                        var missedIngredientArray:[String] = []
+                        for ingredient in missedIngredientJSONArray {
+                            
+                            let ing = ingredient["originalString"].string!
+                            missedIngredientArray.append(ing)
+                         
+                        }
+                        let usedIngredientJSONArray = recipe["usedIngredients"].array!
+                        var usedIngredientArray:[String] = []
+                        for ingredient in usedIngredientJSONArray {
+                            
+                            let ing = ingredient["name"].string!
+                            usedIngredientArray.append(ing)
+    
+                        }
+                        print(usedIngredientArray)
+                        print(missedIngredientArray)
+
+
+                        
+                        
+                        
+                        self.savedRecipeArray.append(RecipeResult(title: title, id: id, image: image,  ingredientsUsed: ingredientsUsed, ingredientsMissing: ingredientsMissed, readyInMinutes: readyInMinutes, servingNumber:servingNumber))
                         
                         
                     }

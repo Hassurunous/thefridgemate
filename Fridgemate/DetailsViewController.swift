@@ -25,20 +25,15 @@ class DetailsViewController: UIViewController {
     
     @IBOutlet weak var detailRecipeTitle: UILabel!
     
+    @IBOutlet weak var readyInMinutesLabel: UILabel!
+    @IBOutlet weak var servingNumberLabel: UILabel!
     @IBOutlet weak var recipeImage: UIImageView!
     
     var id:Int = 0
+    var readyInMinutes:Int = 0
     
     
-    @IBAction func getRecipe(_ sender: UIButton) {
-     
-        // TODO: Move all of this loading steps stuff to Steps Table View
 
-    
-    
-    
-    
-    }
     // MARK: - View stuff
     
     override func viewDidLoad() {
@@ -60,6 +55,9 @@ class DetailsViewController: UIViewController {
         
         if let recipe = recipe {
             id = recipe.id
+            readyInMinutes = recipe.readyInMinutes
+            readyInMinutesLabel.text = "Ready in: \(recipe.readyInMinutes) minutes"
+            servingNumberLabel.text = "Servings: \(recipe.servingNumber)"
             
             detailRecipeTitle.text = recipe.title
             

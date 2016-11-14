@@ -16,9 +16,11 @@ class RecipeResult {
 //    let servings: Int
     let ingredientsUsed:Int
     let ingredientsMissing:Int
+    let readyInMinutes:Int
+    let servingNumber:Int
     
     
-    init(title:String,id:Int,image:String,ingredientsUsed:Int,ingredientsMissing:Int) {
+    init(title:String,id:Int,image:String,ingredientsUsed:Int,ingredientsMissing:Int, readyInMinutes:Int, servingNumber:Int) {
         self.title = title
         self.id = id
         self.image = image
@@ -27,6 +29,8 @@ class RecipeResult {
 //        self.servings = servings
         self.ingredientsUsed = ingredientsUsed
         self.ingredientsMissing = ingredientsMissing
+        self.readyInMinutes = readyInMinutes
+        self.servingNumber = servingNumber
     }
     
 }

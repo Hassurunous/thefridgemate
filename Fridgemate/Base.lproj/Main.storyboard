@@ -321,36 +321,47 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="getRecipe:" destination="FOm-rg-sQ8" eventType="touchUpInside" id="8Hv-cd-qN5"/>
                                     <segue destination="i3M-Q4-W5V" kind="show" identifier="getRecipeSegue" id="J0X-76-Oug"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GGR-W3-HLg">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready in: # Minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mwm-yc-0mw">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Servings: #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htV-XK-gzt">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="ddw-w0-g2d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="GGR-W3-HLg" firstAttribute="leading" secondItem="XYi-Sn-9rp" secondAttribute="leading" id="1mC-V4-8lv"/>
                             <constraint firstItem="2QD-d9-7pI" firstAttribute="top" secondItem="hZH-nk-rMI" secondAttribute="bottom" constant="36" id="1ud-AG-Erg"/>
-                            <constraint firstAttribute="bottom" secondItem="GGR-W3-HLg" secondAttribute="bottom" constant="255" id="55V-m8-qZj"/>
-                            <constraint firstItem="GGR-W3-HLg" firstAttribute="top" secondItem="2QD-d9-7pI" secondAttribute="bottom" constant="61" id="Dya-nW-cjG"/>
+                            <constraint firstItem="htV-XK-gzt" firstAttribute="leading" secondItem="Mwm-yc-0mw" secondAttribute="trailing" constant="58" id="LEh-Mg-sW7"/>
                             <constraint firstItem="2QD-d9-7pI" firstAttribute="leading" secondItem="XYi-Sn-9rp" secondAttribute="leadingMargin" constant="58" id="YQR-SX-COF"/>
-                            <constraint firstItem="GGR-W3-HLg" firstAttribute="centerX" secondItem="2QD-d9-7pI" secondAttribute="centerX" id="YpI-w4-A6D"/>
                             <constraint firstItem="hZH-nk-rMI" firstAttribute="top" secondItem="PsM-a9-H21" secondAttribute="bottom" constant="8" symbolic="YES" id="ZCu-G6-SoZ"/>
+                            <constraint firstItem="htV-XK-gzt" firstAttribute="baseline" secondItem="Mwm-yc-0mw" secondAttribute="baseline" id="ZSc-2x-k6N"/>
                             <constraint firstItem="hZH-nk-rMI" firstAttribute="trailing" secondItem="XYi-Sn-9rp" secondAttribute="trailingMargin" id="aEQ-bD-1yy"/>
+                            <constraint firstItem="Mwm-yc-0mw" firstAttribute="leading" secondItem="hZH-nk-rMI" secondAttribute="leading" id="g3h-K7-vOm"/>
                             <constraint firstItem="hZH-nk-rMI" firstAttribute="leading" secondItem="XYi-Sn-9rp" secondAttribute="leadingMargin" id="koD-wI-xgt"/>
                             <constraint firstItem="2QD-d9-7pI" firstAttribute="centerX" secondItem="hZH-nk-rMI" secondAttribute="centerX" id="oa8-CW-QNk"/>
+                            <constraint firstItem="Mwm-yc-0mw" firstAttribute="top" secondItem="2QD-d9-7pI" secondAttribute="bottom" constant="25" id="sEL-he-Ibp"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="detailRecipeTitle" destination="2QD-d9-7pI" id="oza-yJ-fGJ"/>
+                        <outlet property="readyInMinutesLabel" destination="Mwm-yc-0mw" id="K0m-Ib-NJv"/>
                         <outlet property="recipeImage" destination="hZH-nk-rMI" id="Bjy-hP-BV4"/>
+                        <outlet property="servingNumberLabel" destination="htV-XK-gzt" id="q03-Vb-Gdg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5kA-m0-DNF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5724" y="1003"/>
+            <point key="canvasLocation" x="5724" y="1002.5487256371815"/>
         </scene>
         <!--Recipe Step Table View Controller-->
         <scene sceneID="m6H-Yc-kZp">
