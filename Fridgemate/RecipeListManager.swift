@@ -20,6 +20,9 @@ class RecipeListManager {
     
     var delegate:RecipeManagerDelegate?
     
+    // TODO: Setup these arrays as arrays of string
+    var missedIngredientArray:[String] = []
+    var usedIngredientArray:[String] = []
     
     
     let URL = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/searchComplex"
@@ -51,7 +54,7 @@ class RecipeListManager {
 
                     
                     let allRecipeData = recipeData["results"].array!
-                       print(allRecipeData)
+                    
                    
                     let recipeArray: [String] = []
                     
@@ -70,12 +73,23 @@ class RecipeListManager {
                         
                         let missedIngredientJSONArray = recipe["missedIngredients"].array!
                         var missedIngredientArray:[String] = []
+                        
+                        
+               
+                        
                         for ingredient in missedIngredientJSONArray {
-                            
+                            // TODO: append ingredient to tempmissing
+                            // TODO: Fixe spelling
                             let ing = ingredient["originalString"].string!
                             missedIngredientArray.append(ing)
                          
                         }
+                        let missingArray =  missedIngredientArray
+                       
+                        
+                        // TODO: Append tempmissing to missedIngredientArray
+                        
+                        
                         let usedIngredientJSONArray = recipe["usedIngredients"].array!
                         var usedIngredientArray:[String] = []
                         for ingredient in usedIngredientJSONArray {
@@ -84,14 +98,18 @@ class RecipeListManager {
                             usedIngredientArray.append(ing)
     
                         }
+
+                        let usedArray = usedIngredientArray
+
                         print(usedIngredientArray)
+                        print("-__--")
                         print(missedIngredientArray)
-
-
+                        
+                        print("-__--")
+                        print("-__--")
                         
                         
-                        
-                        self.savedRecipeArray.append(RecipeResult(title: title, id: id, image: image,  ingredientsUsed: ingredientsUsed, ingredientsMissing: ingredientsMissed, readyInMinutes: readyInMinutes, servingNumber:servingNumber))
+                        self.savedRecipeArray.append(RecipeResult(title: title, id: id, image: image,  ingredientsUsed: ingredientsUsed, ingredientsMissing: ingredientsMissed, readyInMinutes: readyInMinutes, servingNumber:servingNumber, missingArray:missingArray, usedArray:usedArray))
                         
                         
                     }
@@ -101,6 +119,7 @@ class RecipeListManager {
                     
                     if let delegate = self.delegate {
                         delegate.didLoadRecipes()
+                        print("delegate in RecipeListManager called")
                     }
                     
                     let recipeListString  = recipeArray.joined(separator: ",")

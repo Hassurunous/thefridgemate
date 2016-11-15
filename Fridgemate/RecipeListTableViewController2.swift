@@ -100,9 +100,11 @@ class RecipeListTableViewController: UITableViewController, RecipeManagerDelegat
                 if let indexPath = tableView.indexPathForSelectedRow {
                     let destVC = segue.destination as! DetailsViewController
                     
-                    print(RecipeListManager.sharedInstance.savedRecipeArray)
+                    
                     
                     destVC.recipe = RecipeListManager.sharedInstance.savedRecipeArray[indexPath.row]
+                    destVC.missedIngredientArray = RecipeListManager.sharedInstance.missedIngredientArray
+                    destVC.usedIngredientArray = RecipeListManager.sharedInstance.usedIngredientArray
                     // destVC.detailRecipeTitle.text = RecipeListManager.sharedInstance.savedRecipeArray[indexPath.row].title
                     
                     

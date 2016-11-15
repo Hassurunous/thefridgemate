@@ -18,9 +18,11 @@ class RecipeResult {
     let ingredientsMissing:Int
     let readyInMinutes:Int
     let servingNumber:Int
+    let missingArray:[String]
+    let usedArray:[String]
     
     
-    init(title:String,id:Int,image:String,ingredientsUsed:Int,ingredientsMissing:Int, readyInMinutes:Int, servingNumber:Int) {
+    init(title:String,id:Int,image:String,ingredientsUsed:Int,ingredientsMissing:Int, readyInMinutes:Int, servingNumber:Int, missingArray:[String], usedArray:[String]) {
         self.title = title
         self.id = id
         self.image = image
@@ -31,6 +33,8 @@ class RecipeResult {
         self.ingredientsMissing = ingredientsMissing
         self.readyInMinutes = readyInMinutes
         self.servingNumber = servingNumber
+        self.usedArray = usedArray
+        self.missingArray = missingArray
     }
     
 }
