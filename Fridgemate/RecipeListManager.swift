@@ -65,13 +65,12 @@ class RecipeListManager {
                         let title = recipe["title"].string!
                         let image = recipe["image"].string!
 
-                        let ingredientsUsed = recipe["usedIngredientCount"].int!
-                        let ingredientsMissed = recipe["missedIngredientCount"].int!
                         let id = recipe["id"].int!
                         let servingNumber = recipe["servings"].int!
                         
                         
                         let missedIngredientJSONArray = recipe["missedIngredients"].array!
+                     
                         var missedIngredientArray:[String] = []
                         
                         
@@ -80,11 +79,12 @@ class RecipeListManager {
                         for ingredient in missedIngredientJSONArray {
                             // TODO: append ingredient to tempmissing
                             // TODO: Fixe spelling
-                            let ing = ingredient["originalString"].string!
+                            let ing = ingredient["name"].string!
                             missedIngredientArray.append(ing)
                          
                         }
                         let missingArray =  missedIngredientArray
+                        let ingredientsMissed = missingArray.count
                        
                         
                         // TODO: Append tempmissing to missedIngredientArray
@@ -100,6 +100,7 @@ class RecipeListManager {
                         }
 
                         let usedArray = usedIngredientArray
+                         let ingredientsUsed = usedArray.count
 
                         print(usedIngredientArray)
                         print("-__--")
