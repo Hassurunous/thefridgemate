@@ -131,6 +131,15 @@ class RecipeListManager {
                 }
                 
             case .failure(let error):
+                 self.savedRecipeArray.append(RecipeResult(title: "Sorry! Try adjusting your pantry list and then search!", id: 0, image: "",  ingredientsUsed: 0, ingredientsMissing: 0, readyInMinutes: 0, servingNumber:0, missingArray:[], usedArray:[]))
+                 
+                 if let delegate = self.delegate {
+                    delegate.didLoadRecipes()
+                    print("delegate in RecipeListManager called because there was a failure")
+                 }
+                 
+
+                 
                 print()
                 print()
                 print()

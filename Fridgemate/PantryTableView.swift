@@ -9,12 +9,14 @@
 import UIKit
 
 class PantryTableView: Pantry, UITableViewDelegate, UITableViewDataSource, PantryTableViewCellDelegate {
+    var RecipeTableViewController2 : RecipeListTableViewController?
     
     var dataForSliders: [Float] = []
     
     @IBAction func recipeSearchButtonTapped(_ sender: UIButton) {
         RecipeListManager.sharedInstance.RecipeSearch()
         self.tabBarController?.selectedIndex = 1;
+        RecipeTableViewController2?.tableView.reloadData()
     }
     override func viewDidLoad() {
         super.viewDidLoad()

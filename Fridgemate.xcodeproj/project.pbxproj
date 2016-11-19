@@ -47,6 +47,11 @@
 		DD85A4031DBFE6DE00E0D6AE /* Pantry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD85A4021DBFE6DE00E0D6AE /* Pantry.swift */; };
 		DD85A40F1DC02C3700E0D6AE /* PantryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD85A40E1DC02C3700E0D6AE /* PantryTableViewCell.swift */; };
 		DD95EA691DDB96AA00C0256E /* MissedIngredientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD95EA681DDB96AA00C0256E /* MissedIngredientTableViewCell.swift */; };
+		DD95EA6D1DDC177F00C0256E /* PantryBG_W'OB.png in Resources */ = {isa = PBXBuildFile; fileRef = DD95EA6C1DDC177F00C0256E /* PantryBG_W'OB.png */; };
+		DDA8B9D31DDED75800426C9F /* LaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA8B9D21DDED75700426C9F /* LaunchScreen.png */; };
+		DDA8B9D51DDED9B500426C9F /* iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA8B9D41DDED9B500426C9F /* iPhone.png */; };
+		DDA8B9D71DDED9B600426C9F /* StartUpScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA8B9D61DDED9B600426C9F /* StartUpScreen.png */; };
+		DDA8B9D91DDEDAF100426C9F /* LaunchScreen1.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA8B9D81DDEDAF100426C9F /* LaunchScreen1.png */; };
 		DDBF7A051DC299BC002DEEF3 /* RecipeListCellStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBF7A041DC299BC002DEEF3 /* RecipeListCellStruct.swift */; };
 		DDD68A151DC06BE20040111D /* PantryTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD68A141DC06BE20040111D /* PantryTableView.swift */; };
 		DDF364F21DC2987400A4A2C8 /* RecipeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF364F11DC2987400A4A2C8 /* RecipeListTableViewCell.swift */; };
@@ -125,6 +130,11 @@
 		DD85A4021DBFE6DE00E0D6AE /* Pantry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pantry.swift; sourceTree = "<group>"; };
 		DD85A40E1DC02C3700E0D6AE /* PantryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PantryTableViewCell.swift; sourceTree = "<group>"; };
 		DD95EA681DDB96AA00C0256E /* MissedIngredientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissedIngredientTableViewCell.swift; sourceTree = "<group>"; };
+		DD95EA6C1DDC177F00C0256E /* PantryBG_W'OB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PantryBG_W'OB.png"; sourceTree = "<group>"; };
+		DDA8B9D21DDED75700426C9F /* LaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreen.png; sourceTree = "<group>"; };
+		DDA8B9D41DDED9B500426C9F /* iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone.png; sourceTree = "<group>"; };
+		DDA8B9D61DDED9B600426C9F /* StartUpScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StartUpScreen.png; sourceTree = "<group>"; };
+		DDA8B9D81DDEDAF100426C9F /* LaunchScreen1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreen1.png; sourceTree = "<group>"; };
 		DDBF7A041DC299BC002DEEF3 /* RecipeListCellStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeListCellStruct.swift; sourceTree = "<group>"; };
 		DDD68A141DC06BE20040111D /* PantryTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PantryTableView.swift; sourceTree = "<group>"; };
 		DDF364F11DC2987400A4A2C8 /* RecipeListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeListTableViewCell.swift; sourceTree = "<group>"; };
@@ -209,6 +219,8 @@
 			children = (
 				DD4DAFD31DBB473700D06B9E /* AppDelegate.swift */,
 				DD4DAFD71DBB473700D06B9E /* Main.storyboard */,
+				DDA8B9D81DDEDAF100426C9F /* LaunchScreen1.png */,
+				DD95EA6C1DDC177F00C0256E /* PantryBG_W'OB.png */,
 				DD95EA681DDB96AA00C0256E /* MissedIngredientTableViewCell.swift */,
 				DD0297AC1DD7E328003F8495 /* StartUpViewController.swift */,
 				DDFC62D91DC1B00200E43D87 /* Pantry */,
@@ -296,6 +308,9 @@
 				DDBF7A041DC299BC002DEEF3 /* RecipeListCellStruct.swift */,
 				DDF364F11DC2987400A4A2C8 /* RecipeListTableViewCell.swift */,
 				DDFC62DB1DC1B36D00E43D87 /* RecipeListManager.swift */,
+				DDA8B9D21DDED75700426C9F /* LaunchScreen.png */,
+				DDA8B9D41DDED9B500426C9F /* iPhone.png */,
+				DDA8B9D61DDED9B600426C9F /* StartUpScreen.png */,
 				DDFC3C641DC41A5A0007C779 /* RecipeListTableViewController2.swift */,
 			);
 			name = RecipeList;
@@ -447,6 +462,7 @@
 				DD51FA261DD7BD4D008B9F24 /* Icon-App-20x20@3x.png in Resources */,
 				DD4DAFDE1DBB473700D06B9E /* Assets.xcassets in Resources */,
 				DD51FA2C1DD7BD4D008B9F24 /* Icon-App-40x40@3x.png in Resources */,
+				DDA8B9D71DDED9B600426C9F /* StartUpScreen.png in Resources */,
 				DD51FA2F1DD7BD4D008B9F24 /* Icon-App-60x60@2x.png in Resources */,
 				DD51FA271DD7BD4D008B9F24 /* Icon-App-29x29@1x.png in Resources */,
 				DD51FA2E1DD7BD4D008B9F24 /* Icon-App-60x60@1x.png in Resources */,
@@ -457,10 +473,14 @@
 				DD51FA351DD7BD4D008B9F24 /* iTunesArtwork@1x.png in Resources */,
 				DD51FA2A1DD7BD4D008B9F24 /* Icon-App-40x40@1x.png in Resources */,
 				DD51FA321DD7BD4D008B9F24 /* Icon-App-76x76@2x.png in Resources */,
+				DDA8B9D51DDED9B500426C9F /* iPhone.png in Resources */,
 				DD51FA2D1DD7BD4D008B9F24 /* Icon-App-57x57@1x.png in Resources */,
+				DDA8B9D91DDEDAF100426C9F /* LaunchScreen1.png in Resources */,
 				DD4DAFD91DBB473700D06B9E /* Main.storyboard in Resources */,
 				DD51FA371DD7BD4D008B9F24 /* iTunesArtwork@3x.png in Resources */,
 				DD51FA231DD7BD4D008B9F24 /* Contents.json in Resources */,
+				DD95EA6D1DDC177F00C0256E /* PantryBG_W'OB.png in Resources */,
+				DDA8B9D31DDED75800426C9F /* LaunchScreen.png in Resources */,
 				DD51FA361DD7BD4D008B9F24 /* iTunesArtwork@2x.png in Resources */,
 				DD51FA341DD7BD4D008B9F24 /* Icon-App-83.5x83.5@2x.png in Resources */,
 				DD51FA291DD7BD4D008B9F24 /* Icon-App-29x29@3x.png in Resources */,
@@ -783,12 +803,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 7G8EV52YPP;
 				INFOPLIST_FILE = Fridgemate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.Fridgemate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -798,12 +820,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 7G8EV52YPP;
 				INFOPLIST_FILE = Fridgemate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.Fridgemate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Pantry: UIViewController {
+class Pantry: UIViewController, UITextFieldDelegate {
     
     //MARK: -  Variables
     var ingredientListArray:[String] = []
@@ -21,13 +21,13 @@ class Pantry: UIViewController {
 
     //MARK: - IB Actions
     
-    
+
     @IBAction func addIngredientButton(_ sender: AnyObject) {
         var text = ingredientTextField.text
         if ingredientTextField.text != "" {
             for c in (ingredientTextField.text?.characters)! {
                 if c != " " {
-                    text = text?.trimmingCharacters(in: CharacterSet.whitespaces)
+                    text = text?.trimmingCharacters(in: CharacterSet.whitespaces).capitalized
                    // ingredientListArray.append(text!)
                     PantryManager.sharedInstance.add(item: text!)
                     break
@@ -56,11 +56,16 @@ class Pantry: UIViewController {
     
     //MARK: - Initial setup
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = (false)
         self.tabBarController?.selectedIndex = 0;
         
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        
+           view.addGestureRecognizer(tap)
+        self.ingredientTextField.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -75,9 +80,47 @@ class Pantry: UIViewController {
         
     }
 
-    /*
-    // MARK: - Navigation
-
+    
+    // MARK: - Functions
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        
+        //textField code
+        
+        textField.resignFirstResponder()  //if desired
+        performAction()
+        return true
+    }
+    
+    func performAction() {
+        var text = ingredientTextField.text
+        if ingredientTextField.text != "" {
+            for c in (ingredientTextField.text?.characters)! {
+                if c != " " {
+                    text = text?.trimmingCharacters(in: CharacterSet.whitespaces)
+                    // ingredientListArray.append(text!)
+                    PantryManager.sharedInstance.add(item: text!)
+                    break
+                }
+            }
+        }
+        
+        ingredientTextField.text="";
+        let pantryListString  = ingredientListArray.joined(separator: ",")
+        userDefaults.set(pantryListString, forKey: "pantryList")
+        userDefaults.synchronize()
+        //print(ingredientListArray)
+        
+        self.pantryTable.reloadData()
+        
+        
+    }
+    
+/*
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
