@@ -50,12 +50,12 @@ class RecipeListManager {
                 if let value = response.result.value {
                     let recipeData = JSON(value)
                     
-               // print(recipeData)
-
+                    // print(recipeData)
+                    
                     
                     let allRecipeData = recipeData["results"].array!
+                    print(allRecipeData)
                     
-                   
                     let recipeArray: [String] = []
                     
                     self.savedRecipeArray = []
@@ -64,31 +64,23 @@ class RecipeListManager {
                         let readyInMinutes = recipe["readyInMinutes"].int!
                         let title = recipe["title"].string!
                         let image = recipe["image"].string!
-
                         let id = recipe["id"].int!
                         let servingNumber = recipe["servings"].int!
-                        
-                        
                         let missedIngredientJSONArray = recipe["missedIngredients"].array!
-                     
+                        
                         var missedIngredientArray:[String] = []
-                        
-                        
-               
-                        
+
                         for ingredient in missedIngredientJSONArray {
                             // TODO: append ingredient to tempmissing
                             // TODO: Fixe spelling
-                            let ing = ingredient["name"].string!
+                            let ing = ingredient["originalString"].string!
                             missedIngredientArray.append(ing)
-                         
+                            
                         }
                         let missingArray =  missedIngredientArray
                         let ingredientsMissed = missingArray.count
-                       
                         
                         // TODO: Append tempmissing to missedIngredientArray
-                        
                         
                         let usedIngredientJSONArray = recipe["usedIngredients"].array!
                         var usedIngredientArray:[String] = []
@@ -96,28 +88,18 @@ class RecipeListManager {
                             
                             let ing = ingredient["name"].string!
                             usedIngredientArray.append(ing)
-    
+                            
                         }
-
-                        let usedArray = usedIngredientArray
-                         let ingredientsUsed = usedArray.count
-
-                        print(usedIngredientArray)
-                        print("-__--")
-                        print(missedIngredientArray)
                         
-                        print("-__--")
-                        print("-__--")
+                        let usedArray = usedIngredientArray
+                        let ingredientsUsed = usedArray.count
                         
                         
                         self.savedRecipeArray.append(RecipeResult(title: title, id: id, image: image,  ingredientsUsed: ingredientsUsed, ingredientsMissing: ingredientsMissed, readyInMinutes: readyInMinutes, servingNumber:servingNumber, missingArray:missingArray, usedArray:usedArray))
                         
                         
                     }
-                    
-                   
-
-                    
+    
                     if let delegate = self.delegate {
                         delegate.didLoadRecipes()
                         print("delegate in RecipeListManager called")
@@ -125,23 +107,16 @@ class RecipeListManager {
                     
                     let recipeListString  = recipeArray.joined(separator: ",")
                     UserDefaults.standard.set(recipeListString, forKey:"recipeList")
-
-                    
-                    
                 }
                 
             case .failure(let error):
-                 self.savedRecipeArray.append(RecipeResult(title: "Sorry! Try adjusting your pantry list and then search!", id: 0, image: "",  ingredientsUsed: 0, ingredientsMissing: 0, readyInMinutes: 0, servingNumber:0, missingArray:[], usedArray:[]))
-                 
-                 if let delegate = self.delegate {
+                self.savedRecipeArray.append(RecipeResult(title: "Sorry! Try adjusting your pantry list and then search!", id: 0, image: "",  ingredientsUsed: 0, ingredientsMissing: 0, readyInMinutes: 0, servingNumber:0, missingArray:[], usedArray:[]))
+                
+                if let delegate = self.delegate {
                     delegate.didLoadRecipes()
                     print("delegate in RecipeListManager called because there was a failure")
-                 }
-                 
-
-                 
-                print()
-                print()
+                }
+                
                 print()
                 print("--------------------------")
                 print(error)
@@ -149,7 +124,6 @@ class RecipeListManager {
             }
         }
     }
-    // var recipeList = UserDefaults.standard.object(forKey: "savedRecipeList")! as! [String]
 }
 
 
