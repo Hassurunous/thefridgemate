@@ -15,51 +15,46 @@ protocol RecipeStepDelegate {
 }
 
 class DetailsViewController: UIViewController, RecipeManagerDelegate {
+    
+    //MARK: Initial declarations
+    
     static let sharedInstance = DetailsViewController()
     var delegate:RecipeStepDelegate?
     var recipe:RecipeResult? = nil
     var missedIngredientArray:[String] = []
     var usedIngredientArray:[String] = []
-    
-    // MARK: - IBOutlets
-    
-    @IBOutlet weak var detailRecipeTitle: UILabel!
-    
-    @IBOutlet weak var readyInMinutesLabel: UILabel!
-    @IBOutlet weak var servingNumberLabel: UILabel!
-    @IBOutlet weak var recipeImage: UIImageView!
-    
-    @IBOutlet weak var usedIngredientTable: UITableView!
-    @IBOutlet weak var missedIngredientTable: UITableView!
     var id:Int = 0
     var readyInMinutes:Int = 0
     var usedArray:[String] = []
     var missedArray:[String] = []
+    var allIngredientsArray:[String] = []
     
+    // MARK: - IBOutlets
     
-    
+    @IBOutlet weak var detailRecipeTitle: UILabel!
+    @IBOutlet weak var readyInMinutesLabel: UILabel!
+    @IBOutlet weak var servingNumberLabel: UILabel!
+    @IBOutlet weak var recipeImage: UIImageView!
+    @IBOutlet weak var usedIngredientTable: UITableView!
+    @IBOutlet weak var allIngredientsTable: UITableView!
     
     // MARK: RecipeManagerDelegate functions
     
     func didLoadRecipes() {
-        usedIngredientTable.reloadData()
-        missedIngredientTable.reloadData()
-        print(usedIngredientArray.count)
-        print(missedIngredientArray.count)
+        
+        allIngredientsTable.reloadData()
     }
     
-    // MARK: - View stuff
+    // MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "Recipe View"
+        navigationItem.title = "Recipe Details"
         self.navigationController?.navigationBar.barTintColor = UIColor.brown
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
-        
-        // Do any additional setup after loading the view.
         RecipeListManager.sharedInstance.delegate = self
-        print("setting Detail TBLV delegate")
+        self.allIngredientsTable.layer.cornerRadius = 12;
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -68,6 +63,7 @@ class DetailsViewController: UIViewController, RecipeManagerDelegate {
         
         usedIngredientArray = RecipeListManager.sharedInstance.usedIngredientArray
         missedIngredientArray = RecipeListManager.sharedInstance.missedIngredientArray
+        
         if let recipe = recipe {
             id = recipe.id
             readyInMinutes = recipe.readyInMinutes
@@ -75,6 +71,7 @@ class DetailsViewController: UIViewController, RecipeManagerDelegate {
             servingNumberLabel.text = "Servings: \(recipe.servingNumber)"
             usedArray = recipe.usedArray
             missedArray = recipe.missingArray
+            allIngredientsArray = recipe.allIngredientsArray
             
             detailRecipeTitle.text = recipe.title
             
@@ -87,78 +84,45 @@ class DetailsViewController: UIViewController, RecipeManagerDelegate {
             })
             session.resume()
         }
-        //        if let recipeIMAGE = recipeIMAGE {
-        //            recipeImage.image = recipeIMAGE
-        //        }
-        //
     }
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
     
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "getRecipeSegue" {    print()
+        if segue.identifier == "getRecipeSegue" {
             let destVC = segue.destination as! RecipeStepTableViewController
-            // destVC.recipeSteps = recipeStepArray
             
-            // TODO: fix this
             destVC.id = self.id
             
         }
-        
-        
     }
-    
 }
 
 extension DetailsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-       
-        
+
         switch tableView {
-        case missedIngredientTable: cell.textLabel?.text = missedArray[indexPath.row]; return cell
-        case usedIngredientTable: cell.textLabel?.text = usedArray[indexPath.row]; return cell
+            
+        case allIngredientsTable: cell.textLabel?.text = allIngredientsArray[indexPath.row]
+        cell.textLabel?.textColor = UIColor.white; return cell
+
+       // case usedIngredientTable: cell.textLabel?.text = usedArray[indexPath.row]; return cell
+            
         default: return cell
         }
-//        if tableView === missedIngredientTable {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-//            return cell
-//        }
-//        else if tableView === usedIngredientTable {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-//            return cell
-//        }
-//        return cell
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(missedArray)
-        print("---------")
-        print("---------")
-        print(usedArray)
+        
         switch tableView {
-        case missedIngredientTable: return missedArray.count
+        case allIngredientsTable: return allIngredientsArray.count
             
-
-        case usedIngredientTable: return usedArray.count
-
+        //case usedIngredientTable: return usedArray.count
+            
         default: return 1
         }
-        
-//        if tableView === missedIngredientTable {
-//            return missedIngredientArray.count
-//        }
-//        else if tableView === usedIngredientTable {
-//            return usedIngredientArray.count
-//        }
-//        return 1
+
     }
     
     
