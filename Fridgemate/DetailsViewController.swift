@@ -94,8 +94,18 @@ class DetailsViewController: UIViewController, RecipeManagerDelegate {
             
             destVC.id = self.id
             
+            
+        }
+        else if segue.identifier == "missingSegue" {
+            let destVC = segue.destination as! MissingIngredientTableViewController
+            
+            destVC.recipe = self.recipe
+            
+            
         }
     }
+
+   
 }
 
 extension DetailsViewController: UITableViewDelegate, UITableViewDataSource {

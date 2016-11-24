@@ -116,7 +116,7 @@ class RecipeListTableViewController: UITableViewController, RecipeManagerDelegat
                 destVC.recipe = RecipeListManager.sharedInstance.savedRecipeArray[indexPath.row]
                 destVC.missedIngredientArray = RecipeListManager.sharedInstance.missedIngredientArray
                 destVC.usedIngredientArray = RecipeListManager.sharedInstance.usedIngredientArray
-                // destVC.detailRecipeTitle.text = RecipeListManager.sharedInstance.savedRecipeArray[indexPath.row].title
+
                 
                 
             }
