@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:noImageIcon/NoImageIcon2.png">
+   </FileRef>
+   <FileRef
+      location = "group:noImageIcon/NoImageIcon2@2x.png">
+   </FileRef>
+   <FileRef
+      location = "group:noImageIcon/NoImageIcon2@3x.png">
+   </FileRef>
+   <FileRef
       location = "group:Fridgemate.xcodeproj">
    </FileRef>
    <FileRef

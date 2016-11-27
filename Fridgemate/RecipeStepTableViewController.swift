@@ -72,7 +72,7 @@ class RecipeStepTableViewController: UITableViewController {
                     }
                     else {
                         print("this recipe doesnt have any steps")
-                        self.recipeStepArray.append(RecipeInstruction(stepNumber: 0, stepDescription: "Sorry! This recipe is not available 😩"))
+                        self.recipeStepArray.append(RecipeInstruction(stepNumber: 0, stepDescription: "Something went wrong.This recipe is not available. "))
                         self.tableView.reloadData()
                     }
     

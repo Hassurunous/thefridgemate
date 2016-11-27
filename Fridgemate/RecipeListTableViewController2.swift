@@ -17,6 +17,7 @@ class RecipeListTableViewController: UITableViewController, RecipeManagerDelegat
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
         
         tableView.reloadData()
+        tableView.setNeedsDisplay()
     }
     
     
@@ -39,8 +40,9 @@ class RecipeListTableViewController: UITableViewController, RecipeManagerDelegat
     
     
     func didLoadRecipes() {
-        //        print("Did load recipes!!!!!")
+        
         tableView.reloadData()
+        tableView.setNeedsDisplay()
     }
     
     

@@ -14,29 +14,28 @@ class MissingIngredientTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     override func viewWillAppear(_ animated: Bool) {
+        
+        navigationItem.title = "Missing Ingredients"
+        self.navigationController?.navigationBar.barTintColor = UIColor.brown
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+        
         if let recipe = recipe {
 
             missedArray = recipe.missingArray
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = self.missedArray[indexPath.row]
-        cell.textLabel?.textColor = UIColor.white
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MissingIngredientTableViewCell
+        cell.misingIngredientTextLabel?.text = self.missedArray[indexPath.row]
+        cell.misingIngredientTextLabel?.textColor = UIColor.white
         
         // Configure the cell...
-        print(#function)
-        print(missedArray)
         return cell
     }
 

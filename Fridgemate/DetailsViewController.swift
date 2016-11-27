@@ -54,7 +54,7 @@ class DetailsViewController: UIViewController, RecipeManagerDelegate {
         self.navigationController?.navigationBar.barTintColor = UIColor.brown
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
         RecipeListManager.sharedInstance.delegate = self
-        self.allIngredientsTable.layer.cornerRadius = 12;
+        self.allIngredientsTable.layer.cornerRadius = 8;
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -74,7 +74,7 @@ class DetailsViewController: UIViewController, RecipeManagerDelegate {
             allIngredientsArray = recipe.allIngredientsArray
             
             detailRecipeTitle.text = recipe.title
-            
+           /*
             let url = URL(string: recipe.image)!
             let session = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, eror) in
                 if let data = data {
@@ -83,6 +83,38 @@ class DetailsViewController: UIViewController, RecipeManagerDelegate {
                 }
             })
             session.resume()
+        }
+        */
+            if let url = URL(string: recipe.image) {
+                let task = URLSession.shared.dataTask(with: url) {(data,response, error) in
+                    if let data = data,
+                        let image = UIImage(data: data) {
+                        DispatchQueue.main.async {
+                            self.recipeImage.image = image
+                            
+                        }
+                    }
+                    else {
+                        if let image = UIImage(named: "noImageIcon") {
+                            DispatchQueue.main.async {
+                                self.recipeImage.image = image
+                                
+                            }
+                        }
+                    }
+                }
+                task.resume()
+            }
+            else {
+                if let image = UIImage(named: "noImageIcon") {
+                    DispatchQueue.main.async {
+                        self.recipeImage.image = image
+                        
+                    }
+                
+
+    }
+            }
         }
     }
     
@@ -110,11 +142,11 @@ class DetailsViewController: UIViewController, RecipeManagerDelegate {
 
 extension DetailsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DetailsTableViewCell
 
         switch tableView {
             
-        case allIngredientsTable: cell.textLabel?.text = allIngredientsArray[indexPath.row]
+        case allIngredientsTable: cell.missingIngredientTextLable?.text = allIngredientsArray[indexPath.row]
         cell.textLabel?.textColor = UIColor.white; return cell
 
        // case usedIngredientTable: cell.textLabel?.text = usedArray[indexPath.row]; return cell

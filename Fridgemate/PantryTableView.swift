@@ -17,6 +17,7 @@ class PantryTableView: Pantry, UITableViewDelegate, UITableViewDataSource, Pantr
         RecipeListManager.sharedInstance.RecipeSearch()
         self.tabBarController?.selectedIndex = 1;
         RecipeTableViewController2?.tableView.reloadData()
+        RecipeTableViewController2?.tableView.setNeedsDisplay()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
